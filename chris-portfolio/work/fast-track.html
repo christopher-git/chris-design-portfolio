@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast Track: Bridging the Tracking Gap — Chris Gnanadurai</title>
+<meta name="description" content="A QR-based, contactless check-in flow that closed the visibility gap for loads with no GPS or ELD data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Chris Gnanadurai — home">
+      <span class="brand-mark">CG</span>
+      <span class="brand-name">Chris Gnanadurai</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#work" class="is-active">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="btn-talk" href="../index.html#contact">Let's talk</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<article>
+    <header class="case-hero case-card--indigo">
+      <div class="wrap wrap--narrow">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Projects
+        </a>
+        <div class="case-tags-row">
+          <div class="case-tags"><span class="case-tag">Research</span><span class="case-tag">Design</span><span class="case-tag">2022</span></div>
+        </div>
+        <h2 id="cs-fast-track-title">Fast Track: Bridging the Tracking Gap</h2>
+        <p class="lede">A QR-based, contactless check-in flow that closed the visibility gap for loads with no GPS or ELD data.</p>
+        <p class="role">Research · Product Design</p>
+      </div>
+    </header>
+
+    <div class="article">
+      <h3>Problem statement</h3>
+      <p>FourKites' primary objective is to deliver 100% end-to-end supply chain visibility to every customer, increasing their agility, efficiency, and sustainability. But we consistently heard the same complaint: <em>"load not tracking."</em> Most of the time, the carrier simply hadn't shared asset, GPS, or ELD information with FourKites — making these loads impossible to track and putting real risk on our customers' operations.</p>
+
+      <h3>Overview</h3>
+      <p>Fast Track is a simple solution that fills the tracking gap for loads without an assigned asset, while capturing more detail on the carriers hauling a shipment. It replaces manual, paper-based check-in processes and moves facility operations toward the goal of 100% tracking — letting facility users go completely contactless while still gathering the details they need from drivers.</p>
+      <figure><img src="../assets/images/case-studies/fast-track/opportunity-canvas.jpg" alt="Opportunity canvas mapping the yard visibility problem space and possible solutions"></figure>
+
+      <h3>From kiosks to QR codes</h3>
+      <p>We initially ideated a kiosk-based check-in for yard gates: a driver arrives, checks in at a device planted at the gate. User research quickly revealed why that wouldn't work. Interviews and observations with drivers and yard managers surfaced three blockers:</p>
+      <ul>
+        <li><strong>Cost concerns</strong> — many yards run on tight budgets and couldn't justify kiosk hardware.</li>
+        <li><strong>Technology barriers</strong> — a large share of drivers weren't comfortable with kiosk interfaces.</li>
+        <li><strong>Operational feedback</strong> — yard managers preferred solutions that didn't require new infrastructure.</li>
+      </ul>
+      <figure><img src="../assets/images/case-studies/fast-track/user-journey.jpg" alt="Driver and facility user journey through the check-in process"></figure>
+      <p>We pivoted to a mobile-first, QR-code-based check-in. It eliminated the cost of kiosks, met drivers on a device they already carried, and matched an interaction pattern — scanning a code — they already understood.</p>
+
+      <h3>What is Fast Track?</h3>
+      <p>A simple web-based tool for drivers that starts the moment they scan a QR code. From there, drivers can share carrier and asset information, and capture check-out (picked-up event) and Hours-of-Service break details — no app install, no facility hardware, fully self-service.</p>
+      <figure><img src="../assets/images/case-studies/fast-track/product-overview.png" alt="Fast Track product overview showing the driver-facing mobile flow"></figure>
+      <p>Beyond check-in, Fast Track captures asset assignment details at pickup, generates ETAs and pickup status for every load that uses it, initiates tracking for carriers with existing GPS integrations, and pushes out-of-network carriers to FourKites Connect.</p>
+      <figure><img src="../assets/images/case-studies/fast-track/how-it-works.png" alt="How Fast Track connects driver check-in to downstream tracking and visibility"></figure>
+
+      <h3>Validated with a real customer</h3>
+      <p>We prototyped in Figma, walked the yard journey in Miro, and ran moderated user testing with drivers and facility staff before rolling the pattern out. Land O'Lakes was one of the first customers to put Fast Track into production, giving us a real-world read on adoption and impact beyond the lab.</p>
+      <figure><img src="../assets/images/case-studies/fast-track/land-o-lakes-case-study.jpg" alt="Fast Track case study results with Land O'Lakes"></figure>
+
+      <h3>Impact</h3>
+      <p>Fast Track eliminated manual, paper-based check-in for unassigned loads and moved facility operations toward FourKites' 100% tracking goal — without requiring customers to invest in gate hardware. Because it runs entirely on a driver's own phone, it scaled to new facilities with no on-site infrastructure and gave carriers without GPS or ELD systems a fast, self-service path into the visibility network.</p>
+
+</article>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-headline">Let's build something<br>worth shipping.</p>
+        <a class="footer-cta" href="mailto:christopher.gnanadurai@gmail.com">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:christopher.gnanadurai@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/christopher1212" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 D. Christopher Gnanadurai</p>
+      <p>Director of Product Design · Based in India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

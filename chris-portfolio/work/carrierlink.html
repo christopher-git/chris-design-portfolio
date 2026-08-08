@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CarrierLink App: Real-Time Logistics Tracking — Chris Gnanadurai</title>
+<meta name="description" content="Rebuilding driver trust and app performance to turn a distrusted tracking tool into a 660,000-driver companion app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Chris Gnanadurai — home">
+      <span class="brand-mark">CG</span>
+      <span class="brand-name">Chris Gnanadurai</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#work" class="is-active">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="btn-talk" href="../index.html#contact">Let's talk</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<article>
+    <header class="case-hero case-card--coral">
+      <div class="wrap wrap--narrow">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Projects
+        </a>
+        <div class="case-tags-row">
+          <div class="case-tags"><span class="case-tag">Design</span><span class="case-tag">Case Study</span><span class="case-tag">2022</span></div>
+        </div>
+        <h2 id="cs-carrierlink-title">CarrierLink App: Real-Time Logistics Tracking</h2>
+        <p class="lede">Rebuilding driver trust and app performance to turn a distrusted tracking tool into a 660,000-driver companion app.</p>
+        <p class="role">Design Leadership · Field Research · Strategy</p>
+      </div>
+    </header>
+
+    <div class="article">
+      <h3>Overview</h3>
+      <p>Shipment visibility is FourKites' core value proposition, yet a significant portion of carriers didn't use GPS or ELD devices. Without automated tracking, drivers were forced into constant manual check-ins, brokers and shippers lacked real-time visibility, and trust between drivers and shippers eroded.</p>
+      <p>CarrierLink® — a mobile app used by over 660,000 drivers — was positioned to fill that gap. But the app suffered from low adoption, poor ratings, trust issues, privacy concerns, battery drain complaints, and a heavy app size. As design leadership, my responsibility wasn't just to redesign the app, but to rebuild driver trust, align cross-functional teams, and make the product usable in the unique context of long-haul trucking.</p>
+
+      <h3>Research: meeting drivers where they are</h3>
+      <p>Drivers are constantly on the move, operate on tight schedules, and are often fatigued — remote interviews or scheduled calls were unrealistic. We shifted to contextual discovery: late-night field research at a distribution facility, shadowing drivers during loading and unloading wait times, and travelling with them in truck.</p>
+      <figure><img src="../assets/images/case-studies/carrierlink/customer-visit.png" alt="Field research at a distribution facility, meeting drivers during loading and unloading windows"></figure>
+      <p>We paired that with app store review mining across 280+ reviews, MoEngage auditing of onboarding and permissions, and analysis of session data, drop-off, and location-permission behavior to understand the real trust barriers.</p>
+      <figure><img src="../assets/images/case-studies/carrierlink/persona-journey-map.png" alt="Persona and journey map synthesizing driver pain points across the tracking workflow"></figure>
+      <p>Key pain points surfaced fast: distrust (<em>"you're tracking me, not the load"</em>), fear of battery drain, a heavy, slow app, complex navigation, and difficulty uploading documents.</p>
+
+      <h3>Problem framing</h3>
+      <p><strong>How might we create a frictionless, trustworthy, low-effort mobile tracking experience for drivers that improves load visibility without disrupting their workflow?</strong></p>
+      <p>A qualitative pass over 280 reviews — 114 of them negative — surfaced three themes that became our design priorities:</p>
+      <table>
+        <thead><tr><th>Theme</th><th>Reviews</th><th>Design priority</th></tr></thead>
+        <tbody>
+          <tr><td>Performance (battery, data, slowdowns)</td><td>48</td><td>Highest — performance optimization</td></tr>
+          <tr><td>GPS location reliability</td><td>24</td><td>Stability of the core function</td></tr>
+          <tr><td>Trust / product identity ("why track me?")</td><td>19</td><td>Critical — trust building &amp; communication</td></tr>
+        </tbody>
+      </table>
+      <p>This shared framing aligned leadership, product, engineering, CX, and sales around the same problem before a single screen was redesigned.</p>
+
+      <h3>Design strategy: from tracking tool to driver companion</h3>
+      <p>As design leader, I set three pillars for the redesign:</p>
+      <p><strong>Trust by design</strong> — transparent location messaging, onboarding that clarifies <em>shipment</em> tracking rather than <em>personal</em> tracking, humanized UI, and privacy-first permission flows.</p>
+      <p><strong>Performance optimization</strong> — single-tap tracking start/stop, background tracking with no driver action required, and an aggressive battery and data budget (validated later at 7% battery drain over 8 hours, using just 1.18MB of data).</p>
+      <p><strong>Useful beyond tracking</strong> — we expanded CarrierLink into a driver utility hub: free truck-optimized routing, nearby amenities, facility insights and ratings, and document capture with signatures. This was the difference between a compliance tool drivers tolerated and a companion app they opened daily.</p>
+
+      <div class="image-grid image-grid--3">
+        <img src="../assets/images/case-studies/carrierlink/designs-screen-1.png" alt="CarrierLink app screen">
+        <img src="../assets/images/case-studies/carrierlink/designs-tracking.png" alt="CarrierLink tracking screen">
+        <img src="../assets/images/case-studies/carrierlink/designs-overview.png" alt="CarrierLink design system overview">
+      </div>
+
+      <h3>Impact</h3>
+      <p>Through strategic research, focused feature development, and performance-driven iteration:</p>
+      <ul>
+        <li><strong>660,000+ drivers</strong> now use CarrierLink for routing, visibility, and facility information.</li>
+        <li>CarrierLink is recognized as one of the <strong>highest-rated free apps</strong> for carriers worldwide, up from a 3.2 rating during the initial adoption crisis.</li>
+        <li>App size was reduced by <strong>40%</strong>, with battery and data consumption optimized to the point of validated field testing.</li>
+        <li>Drivers gained <strong>voice-activated, truck-specific turn-by-turn navigation</strong> at no extra subscription cost, with routing options to compare time, distance, and cost.</li>
+      </ul>
+      <figure><img src="../assets/images/case-studies/carrierlink/impact-results.png" alt="CarrierLink adoption and rating results after the redesign"></figure>
+
+</article>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-headline">Let's build something<br>worth shipping.</p>
+        <a class="footer-cta" href="mailto:christopher.gnanadurai@gmail.com">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:christopher.gnanadurai@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/christopher1212" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 D. Christopher Gnanadurai</p>
+      <p>Director of Product Design · Based in India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
