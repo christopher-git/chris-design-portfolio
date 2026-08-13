@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CarrierLink App: Real-Time Logistics Tracking — Chris Gnanadurai</title>
 <meta name="description" content="Rebuilding driver trust and app performance to turn a distrusted tracking tool into a 660,000-driver companion app.">
+<link rel="icon" type="image/png" href="../assets/images/profile/fav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +15,19 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="../index.html" aria-label="Chris Gnanadurai — home">
-      <span class="brand-mark">CG</span>
-      <span class="brand-name">Chris Gnanadurai</span>
+    <a class="brand" href="../index.html" aria-label="Christopher Gnanadurai — home">
+      <span class="brand-mark"><img src="../assets/images/profile/fav.png" alt=""></span>
+      <span class="brand-name">
+        <span class="brand-name-primary">Christopher Gnanadurai</span>
+        <span class="brand-name-role">Director of Product Design</span>
+      </span>
     </a>
     <nav class="primary-nav" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../index.html#work" class="is-active">Work</a>
-      <a href="../index.html#about">About</a>
+      <a href="../index.html#leadership">Leadership</a>
       <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#about">About</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
     <a class="btn-talk" href="../index.html#contact">Let's talk</a>
@@ -33,8 +38,9 @@
   <nav class="mobile-nav" aria-label="Mobile">
     <a href="../index.html">Home</a>
     <a href="../index.html#work">Work</a>
-    <a href="../index.html#about">About</a>
+    <a href="../index.html#leadership">Leadership</a>
     <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#about">About</a>
     <a href="../index.html#contact">Contact</a>
   </nav>
 </header>
@@ -56,53 +62,154 @@
     </header>
 
     <div class="article">
-      <h3>Overview</h3>
-      <p>Shipment visibility is FourKites' core value proposition, yet a significant portion of carriers didn't use GPS or ELD devices. Without automated tracking, drivers were forced into constant manual check-ins, brokers and shippers lacked real-time visibility, and trust between drivers and shippers eroded.</p>
-      <p>CarrierLink® — a mobile app used by over 660,000 drivers — was positioned to fill that gap. But the app suffered from low adoption, poor ratings, trust issues, privacy concerns, battery drain complaints, and a heavy app size. As design leadership, my responsibility wasn't just to redesign the app, but to rebuild driver trust, align cross-functional teams, and make the product usable in the unique context of long-haul trucking.</p>
+      <p>This case study demonstrates how we addressed critical inefficiencies and user experience challenges in logistics tracking to deliver the CarrierLink App, a real-time smartphone tracking solution that significantly improved visibility and driver workflow.</p>
 
-      <h3>Research: meeting drivers where they are</h3>
-      <p>Drivers are constantly on the move, operate on tight schedules, and are often fatigued — remote interviews or scheduled calls were unrealistic. We shifted to contextual discovery: late-night field research at a distribution facility, shadowing drivers during loading and unloading wait times, and travelling with them in truck.</p>
-      <figure><img src="../assets/images/case-studies/carrierlink/customer-visit.png" alt="Field research at a distribution facility, meeting drivers during loading and unloading windows"></figure>
-      <p>We paired that with app store review mining across 280+ reviews, MoEngage auditing of onboarding and permissions, and analysis of session data, drop-off, and location-permission behavior to understand the real trust barriers.</p>
-      <figure><img src="../assets/images/case-studies/carrierlink/persona-journey-map.png" alt="Persona and journey map synthesizing driver pain points across the tracking workflow"></figure>
-      <p>Key pain points surfaced fast: distrust (<em>"you're tracking me, not the load"</em>), fear of battery drain, a heavy, slow app, complex navigation, and difficulty uploading documents.</p>
+      <h3>Executive summary</h3>
+      <p><strong>What is CarrierLink?</strong> A mobile app used by over 660,000 drivers to enable real-time shipment tracking, routing, and document capture.</p>
+      <p><strong>The problem:</strong> Carriers without GPS/ELD systems had no reliable way to provide live tracking. Existing app adoption was low due to trust concerns, battery issues, performance problems, and poor UX.</p>
+      <p><strong>My role:</strong> As the design leader, I partnered with engineering, product, and data science to define the strategy, conduct field research, rebuild driver trust, re-architect the experience, and improve adoption at scale.</p>
+      <p><strong>Impact:</strong> Load visibility improved dramatically, app rating increased, app size was reduced by 40%, and battery + data consumption optimized — leading to massive adoption across North America.</p>
 
-      <h3>Problem framing</h3>
-      <p><strong>How might we create a frictionless, trustworthy, low-effort mobile tracking experience for drivers that improves load visibility without disrupting their workflow?</strong></p>
-      <p>A qualitative pass over 280 reviews — 114 of them negative — surfaced three themes that became our design priorities:</p>
-      <table>
-        <thead><tr><th>Theme</th><th>Reviews</th><th>Design priority</th></tr></thead>
-        <tbody>
-          <tr><td>Performance (battery, data, slowdowns)</td><td>48</td><td>Highest — performance optimization</td></tr>
-          <tr><td>GPS location reliability</td><td>24</td><td>Stability of the core function</td></tr>
-          <tr><td>Trust / product identity ("why track me?")</td><td>19</td><td>Critical — trust building &amp; communication</td></tr>
-        </tbody>
-      </table>
-      <p>This shared framing aligned leadership, product, engineering, CX, and sales around the same problem before a single screen was redesigned.</p>
+      <h3>Overview: the real problem behind "tracking"</h3>
+      <p>Shipment visibility is FourKites' core value proposition, yet a significant portion of carriers didn't use GPS or ELD devices. Without automated tracking:</p>
+      <ul>
+        <li>Drivers were forced into constant manual check-ins.</li>
+        <li>Brokers and shippers lacked real-time visibility.</li>
+        <li>Decisions were delayed, and exceptions escalated unnecessarily.</li>
+        <li>Trust between drivers and shippers eroded.</li>
+      </ul>
+      <p>This wasn't a <em>feature</em> problem, it was an ecosystem gap where the driver's smartphone became the missing link.</p>
+      <p>CarrierLink® was positioned to fill that gap. But the app suffered from <strong>low adoption, poor ratings, trust issues, privacy concerns, battery drain complaints, and heavy app size</strong>.</p>
+      <p>As design leadership, my responsibility was not only to redesign the app but to <strong>rebuild driver trust</strong>, align cross-functional teams, and make the product usable in the unique context of long-haul trucking.</p>
 
-      <h3>Design strategy: from tracking tool to driver companion</h3>
-      <p>As design leader, I set three pillars for the redesign:</p>
-      <p><strong>Trust by design</strong> — transparent location messaging, onboarding that clarifies <em>shipment</em> tracking rather than <em>personal</em> tracking, humanized UI, and privacy-first permission flows.</p>
-      <p><strong>Performance optimization</strong> — single-tap tracking start/stop, background tracking with no driver action required, and an aggressive battery and data budget (validated later at 7% battery drain over 8 hours, using just 1.18MB of data).</p>
-      <p><strong>Useful beyond tracking</strong> — we expanded CarrierLink into a driver utility hub: free truck-optimized routing, nearby amenities, facility insights and ratings, and document capture with signatures. This was the difference between a compliance tool drivers tolerated and a companion app they opened daily.</p>
+      <h3>Research strategy: understanding drivers where they are</h3>
+      <p><strong>Why traditional UX research wouldn't work:</strong> Drivers are constantly on the move, operate on tight schedules, and are often fatigued. Remote interviews or scheduled calls were unrealistic.</p>
+      <p><strong>Design leadership decision:</strong> We shifted to <em>contextual discovery</em>, meeting drivers at the actual facilities where they waited during late-night or early-morning windows.</p>
+      <p><strong>Methods used:</strong></p>
+      <ul>
+        <li><strong>Late-night contextual research</strong> at a distribution facility. Meeting drivers on their schedule helped us uncover real-world constraints in tracking, routing, and trust.</li>
+        <li><strong>Shadowing drivers</strong> during loading/unloading wait times, travelled with them in truck.</li>
+        <li><strong>MoEngage</strong> auditing for onboarding, permissions, and rating recovery.</li>
+        <li><strong>App store review mining</strong>, analysing 280+ reviews.</li>
+        <li><strong>Data analysis</strong> on session patterns, drop-off, uninstalls, and usage.</li>
+        <li><strong>Location permission behaviour analysis</strong> to understand trust barriers.</li>
+      </ul>
 
+      <h3>Customer visit</h3>
       <div class="image-grid image-grid--3">
-        <img src="../assets/images/case-studies/carrierlink/designs-screen-1.png" alt="CarrierLink app screen">
-        <img src="../assets/images/case-studies/carrierlink/designs-tracking.png" alt="CarrierLink tracking screen">
-        <img src="../assets/images/case-studies/carrierlink/designs-overview.png" alt="CarrierLink design system overview">
+        <img src="../assets/images/case-studies/carrierlink/customer-visit-1.png" alt="Field research at a distribution facility, meeting drivers during loading and unloading windows">
+        <img src="../assets/images/case-studies/carrierlink/customer-visit-2.png" alt="Field research photo from the distribution facility visit">
+        <img src="../assets/images/case-studies/carrierlink/customer-visit-3.png" alt="Field research photo from the distribution facility visit">
+        <img src="../assets/images/case-studies/carrierlink/customer-visit-4.png" alt="Field research photo from the distribution facility visit">
+        <img src="../assets/images/case-studies/carrierlink/customer-visit-5.png" alt="Field research photo from the distribution facility visit">
       </div>
 
-      <h3>Impact</h3>
-      <p>Through strategic research, focused feature development, and performance-driven iteration:</p>
+      <h3>Persona &amp; journey map</h3>
+      <figure><img src="../assets/images/case-studies/carrierlink/persona-journey-map.png" alt="Persona and journey map synthesizing driver pain points across the tracking workflow"></figure>
+      <p><strong>Key pain points identified:</strong></p>
       <ul>
-        <li><strong>660,000+ drivers</strong> now use CarrierLink for routing, visibility, and facility information.</li>
-        <li>CarrierLink is recognized as one of the <strong>highest-rated free apps</strong> for carriers worldwide, up from a 3.2 rating during the initial adoption crisis.</li>
-        <li>App size was reduced by <strong>40%</strong>, with battery and data consumption optimized to the point of validated field testing.</li>
-        <li>Drivers gained <strong>voice-activated, truck-specific turn-by-turn navigation</strong> at no extra subscription cost, with routing options to compare time, distance, and cost.</li>
+        <li>Distrust ("You're tracking me, not the load.")</li>
+        <li>Fear of battery drain</li>
+        <li>Heavy app size &amp; slow performance</li>
+        <li>Complex navigation</li>
+        <li>Low-value communication experience</li>
+        <li>Difficulty uploading documents</li>
+        <li>Facility uncertainty (parking, amenities, wait times)</li>
+      </ul>
+
+      <h3>Problem framing</h3>
+      <p><strong>Primary problem:</strong> "How might we create a frictionless, trustworthy, low-effort mobile tracking experience for drivers that improves load visibility without disrupting their workflow?"</p>
+      <p><strong>Secondary problems:</strong></p>
+      <ul>
+        <li>Poor app experience was negatively affecting rating &amp; adoption.</li>
+        <li>App size, battery usage, and data consumption were barriers to usage.</li>
+        <li>Drivers lacked contextual support — routes, amenities, docs.</li>
+        <li>Carriers saw no clear value beyond tracking compliance.</li>
+      </ul>
+      <p>This definition aligned leadership, product, engineering, CX, and sales.</p>
+
+      <h3>Design iteration &amp; testing</h3>
+      <p><strong>Initial adoption challenges.</strong> Despite solving the core tracking problem, the app faced significant challenges:</p>
+      <ul>
+        <li>Poor rating (3.2 rating) &amp; user comments.</li>
+        <li>Battery draining and application size issues.</li>
+        <li><strong>Trust and privacy issues:</strong> Drivers were reluctant to use it, feeling "we are tracking them, not the shipments."</li>
+        <li>We conducted a qualitative analysis of <strong>280 reviews</strong>, shortlisting 114 negative comments to identify 3 core themes.</li>
+      </ul>
+      <figure><img src="../assets/images/case-studies/carrierlink/review-themes-chart.png" alt="Chart breaking down the top themes across 280 app store reviews"></figure>
+      <table>
+        <tr><th>Top 3 themes</th><th># of reviews</th><th>Design priority</th></tr>
+        <tr><td>Performance (phone slows down, battery/data consumption)</td><td>48</td><td><strong>Highest:</strong> performance optimization</td></tr>
+        <tr><td>GPS location</td><td>24</td><td>Stability &amp; reliability of core function</td></tr>
+        <tr><td>Misconception/product identity (why use this app when ELD is available? why are they tracking me?)</td><td>19</td><td>Critical: trust building &amp; communication</td></tr>
+      </table>
+
+      <h3>Design strategy: from tracking tool to driver companion</h3>
+      <p>As design leader, I set three design pillars to improve app performance.</p>
+      <p><strong>Pillar 1: Trust by design</strong></p>
+      <ul>
+        <li>Transparent location messaging</li>
+        <li>Onboarding that clarifies <em>shipment tracking</em>, not <em>personal tracking</em></li>
+        <li>Humanised UI elements</li>
+        <li>Privacy-first permission flows</li>
+      </ul>
+      <p><strong>Pillar 2: Performance optimization</strong></p>
+      <ul>
+        <li>Single-tap tracking start/stop</li>
+        <li>Background tracking requiring no driver action</li>
+        <li>Ultra-low battery &amp; data consumption goals (validated later: 7% battery in 8 hours, only 1.18MB data)</li>
+      </ul>
+      <p><strong>Pillar 3: Make it useful beyond tracking.</strong> This was crucial for adoption. We expanded the app into a <strong>driver utility hub</strong>:</p>
+      <ul>
+        <li>Free truck-optimized routing</li>
+        <li>Nearby amenities</li>
+        <li>Facility insights &amp; ratings</li>
+        <li>Document capture &amp; signatures</li>
+      </ul>
+      <p>These were intentionally chosen to deliver recurring value.</p>
+
+      <h3>Impact and results</h3>
+      <p>Through strategic user research, focused feature development, and performance-driven iteration, the CarrierLink App achieved significant positive impact:</p>
+      <ul>
+        <li><strong>Adoption:</strong> Over 660,000+ drivers are now using CarrierLink for routing, visibility, and facility information.</li>
+        <li><strong>Product perception:</strong> CarrierLink is recognized as one of the highest rated free apps for carriers worldwide.</li>
+        <li><strong>Business value:</strong> It provides drivers access to voice-activated, truck-specific turn-by-turn navigation, eliminating unnecessary subscription costs. Drivers are presented with more routing options to compare time, distance, and routing costs to determine optimal routes.</li>
       </ul>
       <figure><img src="../assets/images/case-studies/carrierlink/impact-results.png" alt="CarrierLink adoption and rating results after the redesign"></figure>
 
+      <h3>Customer feedback</h3>
+      <div class="image-grid image-grid--2">
+        <img src="../assets/images/case-studies/carrierlink/customer-feedback-1.png" alt="Customer feedback on the CarrierLink redesign">
+        <img src="../assets/images/case-studies/carrierlink/customer-feedback-2.png" alt="Customer feedback on the CarrierLink redesign">
+      </div>
+
+      <h3>Designs</h3>
+      <figure><img src="../assets/images/case-studies/carrierlink/designs-overview.png" alt="CarrierLink design system overview"></figure>
+      <div class="image-grid image-grid--3">
+        <img src="../assets/images/case-studies/carrierlink/designs-screen-1.png" alt="CarrierLink app screen">
+        <img src="../assets/images/case-studies/carrierlink/designs-screen-2.png" alt="CarrierLink app screen">
+        <img src="../assets/images/case-studies/carrierlink/designs-screen-3.png" alt="CarrierLink app screen">
+      </div>
+      <div class="image-grid image-grid--2">
+        <img src="../assets/images/case-studies/carrierlink/designs-tracking.png" alt="CarrierLink tracking screen">
+        <img src="../assets/images/case-studies/carrierlink/designs-edocuments.png" alt="CarrierLink document capture (eDocuments) screen">
+      </div>
+      <figure><img src="../assets/images/case-studies/carrierlink/designs-tracking-gps.png" alt="CarrierLink GPS tracking issue resolution screen"></figure>
+      <figure><img src="../assets/images/case-studies/carrierlink/designs-section-1.png" alt="CarrierLink design section overview"></figure>
+
 </article>
+
+<nav class="next-case" aria-label="Case study navigation">
+  <a class="next-case-inner" href="fast-track.html">
+    <div>
+      <span class="next-case-label">Next case study</span>
+      <p class="next-case-title">Fast Track: Bridging the Tracking Gap</p>
+    </div>
+    <span class="next-case-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+</nav>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">

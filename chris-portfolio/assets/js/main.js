@@ -39,6 +39,25 @@
   if (filterRow) {
     var cards = document.querySelectorAll("[data-tags]");
     var chips = filterRow.querySelectorAll(".filter-chip");
+
+    var applyFilter = function (tag) {
+      cards.forEach(function (card) {
+        var tags = (card.getAttribute("data-tags") || "").toLowerCase();
+        var isArchived = tags.indexOf("archive") !== -1;
+        var show;
+        if (tag === "all") {
+          /* Archived case studies are hidden from the default "All work" view. */
+          show = !isArchived;
+        } else {
+          show = tags.indexOf(tag.toLowerCase()) !== -1;
+        }
+        card.closest("[data-card-wrap]").style.display = show ? "" : "none";
+      });
+    };
+
+    /* Apply on load so archived cards stay hidden under the default "All work" chip. */
+    applyFilter("all");
+
     filterRow.addEventListener("click", function (event) {
       var chip = event.target.closest(".filter-chip");
       if (!chip) return;
@@ -48,12 +67,57 @@
       });
       chip.classList.add("is-active");
 
-      var tag = chip.getAttribute("data-filter");
-      cards.forEach(function (card) {
-        var tags = (card.getAttribute("data-tags") || "").toLowerCase();
-        var show = tag === "all" || tags.indexOf(tag.toLowerCase()) !== -1;
-        card.closest("[data-card-wrap]").style.display = show ? "" : "none";
-      });
+      applyFilter(chip.getAttribute("data-filter"));
     });
   }
+
+  /* ---------- Before/after compare sliders ---------- */
+  document.querySelectorAll(".compare-slider").forEach(function (slider) {
+    var frame = slider.querySelector(".compare-slider-frame");
+    var range = slider.querySelector(".compare-slider-range");
+    if (!frame || !range) return;
+
+    var setPos = function (pct) {
+      pct = Math.max(0, Math.min(100, pct));
+      frame.style.setProperty("--pos", pct + "%");
+      range.value = pct;
+    };
+
+    var setPosFromClientX = function (clientX) {
+      var rect = frame.getBoundingClientRect();
+      setPos(((clientX - rect.left) / rect.width) * 100);
+    };
+
+    /* The range input stays pointer-events:none (see CSS) so it only
+       handles keyboard input; the frame itself drives mouse/touch
+       dragging via pointer capture, which tracks reliably even when
+       the cursor moves faster than the resulting layout update. */
+    var dragging = false;
+    frame.addEventListener("pointerdown", function (event) {
+      dragging = true;
+      setPosFromClientX(event.clientX);
+      try {
+        frame.setPointerCapture(event.pointerId);
+      } catch (err) {
+        /* Capture is a nice-to-have for tracking fast drags outside the
+           frame; if it's unavailable, plain pointermove still works. */
+      }
+      event.preventDefault();
+    });
+    frame.addEventListener("pointermove", function (event) {
+      if (!dragging) return;
+      setPosFromClientX(event.clientX);
+      event.preventDefault();
+    });
+    frame.addEventListener("pointerup", function () {
+      dragging = false;
+    });
+    frame.addEventListener("pointercancel", function () {
+      dragging = false;
+    });
+
+    range.addEventListener("input", function () {
+      frame.style.setProperty("--pos", range.value + "%");
+    });
+  });
 })();

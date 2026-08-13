@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "chris-portfolio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "chris-portfolio", "run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "chris-portfolio-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4173", "--directory", "chris-portfolio"],
+      "port": 4173
+    }
+  ]
+}

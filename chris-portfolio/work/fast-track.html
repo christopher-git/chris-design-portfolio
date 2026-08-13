@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fast Track: Bridging the Tracking Gap — Chris Gnanadurai</title>
 <meta name="description" content="A QR-based, contactless check-in flow that closed the visibility gap for loads with no GPS or ELD data.">
+<link rel="icon" type="image/png" href="../assets/images/profile/fav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +15,19 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="../index.html" aria-label="Chris Gnanadurai — home">
-      <span class="brand-mark">CG</span>
-      <span class="brand-name">Chris Gnanadurai</span>
+    <a class="brand" href="../index.html" aria-label="Christopher Gnanadurai — home">
+      <span class="brand-mark"><img src="../assets/images/profile/fav.png" alt=""></span>
+      <span class="brand-name">
+        <span class="brand-name-primary">Christopher Gnanadurai</span>
+        <span class="brand-name-role">Director of Product Design</span>
+      </span>
     </a>
     <nav class="primary-nav" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../index.html#work" class="is-active">Work</a>
-      <a href="../index.html#about">About</a>
+      <a href="../index.html#leadership">Leadership</a>
       <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#about">About</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
     <a class="btn-talk" href="../index.html#contact">Let's talk</a>
@@ -33,8 +38,9 @@
   <nav class="mobile-nav" aria-label="Mobile">
     <a href="../index.html">Home</a>
     <a href="../index.html#work">Work</a>
-    <a href="../index.html#about">About</a>
+    <a href="../index.html#leadership">Leadership</a>
     <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#about">About</a>
     <a href="../index.html#contact">Contact</a>
   </nav>
 </header>
@@ -57,36 +63,107 @@
 
     <div class="article">
       <h3>Problem statement</h3>
-      <p>FourKites' primary objective is to deliver 100% end-to-end supply chain visibility to every customer, increasing their agility, efficiency, and sustainability. But we consistently heard the same complaint: <em>"load not tracking."</em> Most of the time, the carrier simply hadn't shared asset, GPS, or ELD information with FourKites — making these loads impossible to track and putting real risk on our customers' operations.</p>
+      <p>FourKites' primary objective is to deliver 100% end-to-end supply chain visibility to all of our customers in order to increase their agility, efficiency, and sustainability. Frequently, many of our customers contact us with the complaint that their "Load not tracking." This is primarily because their carrier did not provide the asset information, GPS, or ELD data with FourKites. This made it difficult for us to track these loads and posed a substantial risk to our consumers.</p>
 
       <h3>Overview</h3>
-      <p>Fast Track is a simple solution that fills the tracking gap for loads without an assigned asset, while capturing more detail on the carriers hauling a shipment. It replaces manual, paper-based check-in processes and moves facility operations toward the goal of 100% tracking — letting facility users go completely contactless while still gathering the details they need from drivers.</p>
+      <p>FourKites® Fast Track is a simple solution to fill in the tracking gap for loads without an asset assigned. This can also be enabled to capture more details on the carriers hauling your loads. Fast Track will help eliminate manual paper-based check-in processes and move your operations towards the goal of 100% tracking.</p>
+      <blockquote>Fast Track enables facility users to go completely contactless while gathering relevant details from the drivers.</blockquote>
+
+      <h3>Opportunity canvas</h3>
       <figure><img src="../assets/images/case-studies/fast-track/opportunity-canvas.jpg" alt="Opportunity canvas mapping the yard visibility problem space and possible solutions"></figure>
 
-      <h3>From kiosks to QR codes</h3>
-      <p>We initially ideated a kiosk-based check-in for yard gates: a driver arrives, checks in at a device planted at the gate. User research quickly revealed why that wouldn't work. Interviews and observations with drivers and yard managers surfaced three blockers:</p>
-      <ul>
-        <li><strong>Cost concerns</strong> — many yards run on tight budgets and couldn't justify kiosk hardware.</li>
-        <li><strong>Technology barriers</strong> — a large share of drivers weren't comfortable with kiosk interfaces.</li>
-        <li><strong>Operational feedback</strong> — yard managers preferred solutions that didn't require new infrastructure.</li>
-      </ul>
+      <h3>User journey</h3>
       <figure><img src="../assets/images/case-studies/fast-track/user-journey.jpg" alt="Driver and facility user journey through the check-in process"></figure>
-      <p>We pivoted to a mobile-first, QR-code-based check-in. It eliminated the cost of kiosks, met drivers on a device they already carried, and matched an interaction pattern — scanning a code — they already understood.</p>
+
+      <h3>Persona mapping</h3>
+      <p><strong>Gate Guard</strong></p>
+      <figure><img src="../assets/images/case-studies/fast-track/persona-gate-guard.png" alt="Gate Guard persona profile"></figure>
+      <p><strong>Shunt Driver</strong></p>
+      <figure><img src="../assets/images/case-studies/fast-track/persona-shunt-driver.png" alt="Shunt Driver persona profile"></figure>
+
+      <h3>Implementation challenges</h3>
+      <p>We initially ideated a solution for yard management gates using kiosks. The idea was that when a driver entered the gate, they could check-in through a kiosk device placed at the gate. However, during the ideation phase, our user research revealed significant challenges with this approach.</p>
+      <p>Our research involved direct interviews and observations with drivers and yard managers. We discovered several critical insights:</p>
+      <ul>
+        <li><strong>Cost concerns:</strong> Many yards operate on tight budgets and could not justify the investment in kiosks.</li>
+        <li><strong>Technology barriers:</strong> A significant portion of drivers were not familiar with or comfortable using kiosk technology.</li>
+        <li><strong>Operational feedback:</strong> Yard managers preferred solutions that did not require extensive new infrastructure.</li>
+      </ul>
+
+      <h3>Solution: mobile QR code check-in</h3>
+      <p>Based on these insights, we pivoted to a more feasible solution: a QR code-based approach. This alternative allows drivers to check-in using their mobile phones, which addresses the key issues identified.</p>
+      <ul>
+        <li><strong>Reduced cost:</strong> QR codes eliminate the need for expensive kiosks.</li>
+        <li><strong>Increased accessibility:</strong> Most drivers carry smartphones, eliminating the barrier of technology awareness.</li>
+        <li><strong>Simplicity:</strong> Scanning a QR code aligns with existing mobile phone behavior, making check-in intuitive and efficient.</li>
+      </ul>
 
       <h3>What is Fast Track?</h3>
-      <p>A simple web-based tool for drivers that starts the moment they scan a QR code. From there, drivers can share carrier and asset information, and capture check-out (picked-up event) and Hours-of-Service break details — no app install, no facility hardware, fully self-service.</p>
-      <figure><img src="../assets/images/case-studies/fast-track/product-overview.png" alt="Fast Track product overview showing the driver-facing mobile flow"></figure>
-      <p>Beyond check-in, Fast Track captures asset assignment details at pickup, generates ETAs and pickup status for every load that uses it, initiates tracking for carriers with existing GPS integrations, and pushes out-of-network carriers to FourKites Connect.</p>
+      <p><strong>A simple web based tool interface for drivers that:</strong></p>
+      <ul>
+        <li>Starts when the driver scans a QR code</li>
+        <li>Allows the driver to share carrier and asset information</li>
+        <li>Captures check out (picked up event) and Hours Of Service break details from the driver</li>
+      </ul>
+      <blockquote>📍 On-site information capture<br>💻 No facility hardware required<br>📱 Self-service via mobile device<br>🌐 Ability to self-implement</blockquote>
+      <figure><img src="../assets/images/case-studies/fast-track/fast-track-overview.png" alt="Fast Track product overview showing the driver-facing mobile flow"></figure>
+
+      <h3>What can Fast Track do?</h3>
+      <ul>
+        <li>Capture asset assignment details at Pick-up</li>
+        <li>Generate ETA's and Pick-up status for every load utilizing Fast Track</li>
+        <li>Initiate tracking on loads owned by Carriers with existing GPS integrations</li>
+        <li>Push out of network Carriers to FourKites Connect</li>
+      </ul>
+
+      <h3>How does it work?</h3>
       <figure><img src="../assets/images/case-studies/fast-track/how-it-works.png" alt="How Fast Track connects driver check-in to downstream tracking and visibility"></figure>
 
-      <h3>Validated with a real customer</h3>
-      <p>We prototyped in Figma, walked the yard journey in Miro, and ran moderated user testing with drivers and facility staff before rolling the pattern out. Land O'Lakes was one of the first customers to put Fast Track into production, giving us a real-world read on adoption and impact beyond the lab.</p>
-      <figure><img src="../assets/images/case-studies/fast-track/land-o-lakes-case-study.jpg" alt="Fast Track case study results with Land O'Lakes"></figure>
+      <h3>Prototyping</h3>
+      <figure><img src="../assets/images/case-studies/fast-track/prototyping-opportunity.jpg" alt="Yard Connect prototyping — the opportunity"></figure>
+      <p><strong>Important links</strong></p>
+      <ul>
+        <li><a href="https://www.figma.com/proto/cuQotBF4ciHcCDA9B8dvNW/Network-Tracking?node-id=635%3A14428&amp;scaling=min-zoom&amp;page-id=635%3A14236&amp;starting-point-node-id=635%3A14428&amp;show-proto-sidebar=1" target="_blank" rel="noopener noreferrer">Interactive Prototype</a></li>
+        <li><a href="https://miro.com/app/board/o9J_lSH2vJs=/" target="_blank" rel="noopener noreferrer">Yard Journey Map</a></li>
+      </ul>
 
-      <h3>Impact</h3>
-      <p>Fast Track eliminated manual, paper-based check-in for unassigned loads and moved facility operations toward FourKites' 100% tracking goal — without requiring customers to invest in gate hardware. Because it runs entirely on a driver's own phone, it scaled to new facilities with no on-site infrastructure and gave carriers without GPS or ELD systems a fast, self-service path into the visibility network.</p>
+      <h3>User testing</h3>
+      <div class="image-grid image-grid--2">
+        <img src="../assets/images/case-studies/fast-track/user-testing-1.png" alt="User testing session with a driver and facility staff">
+        <img src="../assets/images/case-studies/fast-track/user-testing-2.png" alt="User testing session findings">
+      </div>
+      <p>📽️ <a href="https://drive.google.com/file/d/1V4ePTwj-BSJ2rUN_a32RslgIyalCkUgo/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Testing Video Link</a></p>
+
+      <h3>Case study with Land O'Lakes</h3>
+      <p>Land O'Lakes was one of the first customers to put Fast Track into production, giving us a real-world read on adoption and impact beyond the lab.</p>
+      <div class="image-grid image-grid--2">
+        <img src="../assets/images/case-studies/fast-track/land-o-lakes-1.jpeg" alt="FourKites Fast Track case study with Land O'Lakes, page 1">
+        <img src="../assets/images/case-studies/fast-track/land-o-lakes-2.jpeg" alt="FourKites Fast Track case study with Land O'Lakes, page 2">
+        <img src="../assets/images/case-studies/fast-track/land-o-lakes-3.jpeg" alt="FourKites Fast Track case study with Land O'Lakes, page 3">
+        <img src="../assets/images/case-studies/fast-track/land-o-lakes-4.jpeg" alt="FourKites Fast Track case study with Land O'Lakes, page 4">
+        <img src="../assets/images/case-studies/fast-track/land-o-lakes-5.jpeg" alt="FourKites Fast Track case study with Land O'Lakes, page 5">
+      </div>
+
+      <h3>Related Links</h3>
+      <ul>
+        <li><a href="https://www.figma.com/proto/cuQotBF4ciHcCDA9B8dvNW/Network-Tracking?node-id=635%3A14428&amp;scaling=min-zoom&amp;page-id=635%3A14236&amp;starting-point-node-id=635%3A14428&amp;show-proto-sidebar=1" target="_blank" rel="noopener noreferrer">Interactive Prototype (Figma)</a></li>
+        <li><a href="https://miro.com/app/board/o9J_lSH2vJs=/" target="_blank" rel="noopener noreferrer">Yard Journey Map (Miro)</a></li>
+        <li><a href="https://drive.google.com/file/d/1V4ePTwj-BSJ2rUN_a32RslgIyalCkUgo/view?usp=drive_link" target="_blank" rel="noopener noreferrer">User Testing Video (Google Drive)</a></li>
+      </ul>
 
 </article>
+
+<nav class="next-case" aria-label="Case study navigation">
+  <a class="next-case-inner" href="workspace.html">
+    <div>
+      <span class="next-case-label">Next case study</span>
+      <p class="next-case-title">Workspace: An Integrated Customer Ecosystem</p>
+    </div>
+    <span class="next-case-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+</nav>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">

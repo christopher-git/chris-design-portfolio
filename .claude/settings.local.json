@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__43362d6c-91ba-40c2-849d-59a10d0cce27__notion-search",
+      "mcp__43362d6c-91ba-40c2-849d-59a10d0cce27__notion-fetch",
+      "mcp__43362d6c-91ba-40c2-849d-59a10d0cce27__notion-query-database-view",
+      "Bash(sips -g pixelWidth -g pixelHeight headshot.png)"
+    ]
+  }
+}
