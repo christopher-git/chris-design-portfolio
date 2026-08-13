@@ -17,6 +17,17 @@ chris-portfolio/
     workspace.html
     making-the-invisible-visible.html
     fin-ai.html
+    appointment-manager.html
+    developer-portal.html
+    address-manager-redesign.html
+    platform-redesign.html
+    fourkites-ecosystem.html
+    cross-border-delays.html
+    digital-workforce-ai-agents.html
+    fin-sim.html
+    ai-agent-alan.html
+    ai-disruption-workshop.html
+    customer-facing-workshops.html
   assets/
     css/
       style.css           all styles
@@ -28,7 +39,7 @@ chris-portfolio/
     icons/                 (empty — icons are inline SVG in the HTML; kept for any future icon files)
 ```
 
-`index.html` is a single scrolling page for Home, Work (grid), About, Experience, and Contact, with anchors the navigation jumps to (`#work`, `#about`, `#experience`, `#contact`). Each case study, though, opens as its own separate page under `work/` — clicking a card takes you there, and a "Back to Projects" link at the top returns you to the work grid on the home page.
+`index.html` is a single scrolling page for Home, Work (grid), About, Experience, and Contact, with anchors the navigation jumps to (`#work`, `#about`, `#experience`, `#contact`). Each case study, though, opens as its own separate page under `work/` — clicking a card takes you there, and a "Back to Projects" link at the top returns you to the work grid on the home page. At the bottom of each case study is a "Next case study" link, cycling through all 16 pages in sequence.
 
 ## Editing content
 
@@ -43,7 +54,9 @@ chris-portfolio/
 2. Edit its content, title, and images (images go in `assets/images/case-studies/my-new-project/`).
 3. Add a matching card to the bento grid in `index.html`'s `#work` section, with `href="work/my-new-project.html"`.
 
-**The 4 "Coming soon" cards** (FIN Sim, AI Agent Alan, the AI disruption workshop, Customer Facing Workshops) are placeholders in the grid with no linked page yet — same process as above to bring them online.
+All 16 of Chris's Notion "Featured" case studies are now migrated as full pages — there are no more "Coming soon" placeholders in the grid.
+
+**When adding a new case study, also update the "next case study" link** at the bottom of the case study immediately before it in the grid, so the cycle through all pages stays unbroken.
 
 There's no templating or build step anywhere — edit the HTML directly, save, and refresh the browser to see the change.
 
