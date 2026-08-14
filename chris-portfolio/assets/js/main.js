@@ -120,4 +120,74 @@
       frame.style.setProperty("--pos", range.value + "%");
     });
   });
+
+  /* ---------- Photo lightbox ---------- */
+  var triggers = document.querySelectorAll("[data-lightbox-src]");
+  if (triggers.length) {
+    var overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+    overlay.innerHTML =
+      '<button type="button" class="lightbox-close" aria-label="Close">' +
+      '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      "</button>" +
+      '<button type="button" class="lightbox-arrow lightbox-prev" aria-label="Previous image">' +
+      '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      "</button>" +
+      '<img src="" alt="">' +
+      '<button type="button" class="lightbox-arrow lightbox-next" aria-label="Next image">' +
+      '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      "</button>";
+    document.body.appendChild(overlay);
+    var overlayImg = overlay.querySelector("img");
+    var closeBtn = overlay.querySelector(".lightbox-close");
+    var prevBtn = overlay.querySelector(".lightbox-prev");
+    var nextBtn = overlay.querySelector(".lightbox-next");
+
+    var gallery = [];
+    var galleryIndex = -1;
+
+    var showIndex = function (index) {
+      galleryIndex = (index + gallery.length) % gallery.length;
+      var trigger = gallery[galleryIndex];
+      overlayImg.src = trigger.getAttribute("data-lightbox-src");
+      overlayImg.alt = trigger.getAttribute("data-lightbox-alt") || "";
+    };
+    var openLightbox = function (trigger) {
+      var group = trigger.closest("[data-lightbox-group], .photo-grid") || document;
+      gallery = Array.prototype.slice.call(group.querySelectorAll("[data-lightbox-src]"));
+      var hasMultiple = gallery.length > 1;
+      prevBtn.style.display = hasMultiple ? "" : "none";
+      nextBtn.style.display = hasMultiple ? "" : "none";
+      showIndex(gallery.indexOf(trigger));
+      overlay.classList.add("is-open");
+    };
+    var closeLightbox = function () {
+      overlay.classList.remove("is-open");
+      overlayImg.src = "";
+      gallery = [];
+      galleryIndex = -1;
+    };
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        openLightbox(trigger);
+      });
+    });
+    closeBtn.addEventListener("click", closeLightbox);
+    prevBtn.addEventListener("click", function () {
+      showIndex(galleryIndex - 1);
+    });
+    nextBtn.addEventListener("click", function () {
+      showIndex(galleryIndex + 1);
+    });
+    overlay.addEventListener("click", function (event) {
+      if (event.target === overlay) closeLightbox();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (!overlay.classList.contains("is-open")) return;
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowLeft") showIndex(galleryIndex - 1);
+      if (event.key === "ArrowRight") showIndex(galleryIndex + 1);
+    });
+  }
 })();
