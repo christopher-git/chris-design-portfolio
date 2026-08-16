@@ -10,7 +10,7 @@
     {
       "name": "chris-portfolio-static",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4173", "--directory", "chris-portfolio"],
+      "runtimeArgs": ["-m", "http.server", "4173", "--directory", "."],
       "port": 4173
     }
   ]
