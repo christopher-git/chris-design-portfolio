@@ -12,6 +12,18 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "4173", "--directory", "."],
       "port": 4173
+    },
+    {
+      "name": "chris-portfolio-static-b",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4181", "--directory", "."],
+      "port": 4181
+    },
+    {
+      "name": "chris-portfolio-static-c",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4193", "--directory", "."],
+      "port": 4193
     }
   ]
 }

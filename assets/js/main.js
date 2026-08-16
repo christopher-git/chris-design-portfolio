@@ -1,4 +1,4 @@
-/* Chris Gnanadurai — Portfolio
+/* Chris Gnanadurai · Portfolio
    Plain vanilla JS. No build step, no dependencies. */
 
 (function () {
@@ -16,6 +16,50 @@
       link.addEventListener("click", function () {
         mobileNav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* ---------- Nav link active-state highlighting ---------- */
+  var navLists = document.querySelectorAll(".primary-nav, .mobile-nav");
+  if (navLists.length) {
+    var clearActive = function () {
+      navLists.forEach(function (list) {
+        list.querySelectorAll("a").forEach(function (a) {
+          a.classList.remove("is-active");
+        });
+      });
+    };
+
+    var setActiveByHash = function (hash) {
+      navLists.forEach(function (list) {
+        list.querySelectorAll("a").forEach(function (link) {
+          var linkHash = "#" + (link.href.split("#")[1] || "");
+          link.classList.toggle("is-active", linkHash === hash);
+        });
+      });
+    };
+
+    /* Only sync from the URL hash when one is actually present, so the
+       hardcoded "Work" highlight on case study pages (no hash) is left alone. */
+    if (window.location.hash) {
+      setActiveByHash(window.location.hash);
+    }
+    window.addEventListener("hashchange", function () {
+      setActiveByHash(window.location.hash);
+    });
+
+    navLists.forEach(function (list) {
+      list.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          var href = link.getAttribute("href");
+          clearActive();
+          document.querySelectorAll('.primary-nav a, .mobile-nav a').forEach(function (a) {
+            if (a.getAttribute("href") === href) {
+              a.classList.add("is-active");
+            }
+          });
+        });
       });
     });
   }
