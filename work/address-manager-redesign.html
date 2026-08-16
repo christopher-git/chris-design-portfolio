@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Address Manager: Geofence Audit & Redesign — Chris Gnanadurai</title>
+<meta name="description" content="A usage audit and redesign of the Address Manager tool, driven by geofence-recommendation data and customer time-on-task.">
+<link rel="icon" type="image/png" href="../assets/images/profile/fav.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Christopher Gnanadurai — home">
+      <span class="brand-mark"><img src="../assets/images/profile/fav.png" alt=""></span>
+      <span class="brand-name">
+        <span class="brand-name-primary">Christopher Gnanadurai</span>
+        <span class="brand-name-role">Director of Product Design</span>
+      </span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#work" class="is-active">Work</a>
+      <a href="../index.html#leadership">Leadership</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="btn-talk" href="../index.html#contact">Let's talk</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#leadership">Leadership</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<article>
+    <header class="case-hero case-card--ink">
+      <div class="wrap wrap--narrow">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Projects
+        </a>
+        <div class="case-tags-row">
+          <div class="case-tags"><span class="case-tag">Audit</span><span class="case-tag">Redesign</span><span class="case-tag">2022</span></div>
+        </div>
+        <h2 id="cs-address-manager-redesign-title">Address Manager: Geofence Audit &amp; Redesign</h2>
+        <p class="lede">A usage audit and redesign of FourKites' Address Manager, driven by geofence-recommendation performance and real customer time-on-task data.</p>
+        <p class="role">UX Audit · Interaction Design · Data-Driven Redesign</p>
+      </div>
+    </header>
+
+    <div class="article">
+      <h3>Starting from data, not assumptions</h3>
+      <p>Address Manager lets FourKites customers manage and maintain every stop address in their network — pickup, delivery, and yard facilities — and define the geofences used to detect arrivals and departures. Rather than redesigning from intuition, I started with a UX audit of real usage: customers were spending an average of 9 minutes 13 seconds a day on the Address home page, and I pulled the ten highest-traffic accounts (Unilever, Dow Chemical, Averitt Express, Penske, Niagara Bottling, and others) to see exactly which features they touched most and where they got stuck.</p>
+
+      <div class="image-grid image-grid--2">
+        <img src="../assets/images/case-studies/address-manager-redesign/card-view.png" alt="Address Manager redesigned card view">
+        <img src="../assets/images/case-studies/address-manager-redesign/detail-view.png" alt="Address Manager redesigned detail view">
+      </div>
+
+      <h3>The geofence problem</h3>
+      <p>Geofences — the virtual boundary FourKites uses to detect a truck's arrival or departure at a stop — were being manually drawn and frequently misconfigured, which degraded tracking accuracy across the network. The redesign introduced a recommended-geofence feature: suggestions based on a customer's own geofence performance history and on better-performing geofences already in use at the same physical location elsewhere in the FourKites network.</p>
+
+      <h3>Goals grounded in a baseline</h3>
+      <p>Every design decision was tied to a measurable target set against the audit's baseline: cut average time spent managing addresses from 9.75 to 8.8 minutes per month, and lift adoption of recommended geofences from a 24% baseline to a 70% goal across shippers with recommendations available.</p>
+
+      <h3>Impact</h3>
+      <p>By replacing manual geofence drawing with data-backed recommendations and simplifying the card, list, and detail views around the features customers actually used, the redesign directly targeted the two levers that mattered most: less time spent on a task customers didn't want to be doing, and higher-quality geofences that improve tracking accuracy for every downstream customer relying on that data.</p>
+      <div class="article-end-cta">
+        <a class="btn-back-projects" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Projects
+        </a>
+      </div>
+    </div>
+
+</article>
+
+<nav class="next-case" aria-label="Case study navigation">
+  <a class="next-case-inner" href="platform-redesign.html">
+    <div>
+      <span class="next-case-label">Next case study</span>
+      <p class="next-case-title">Platform Redesign: Navigation, Load Cards &amp; Control Tower</p>
+    </div>
+    <span class="next-case-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-headline">Let's build something<br>worth shipping.</p>
+        <a class="footer-cta" href="mailto:christopher.gnanadurai@gmail.com">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:christopher.gnanadurai@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/christopher1212" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 D. Christopher Gnanadurai</p>
+      <p>Director of Product Design · Based in India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

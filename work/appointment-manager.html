@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appointment Manager: Self-Service Scheduling — Chris Gnanadurai</title>
+<meta name="description" content="Replacing phone-and-email scheduling chaos with a self-service appointment platform for carriers and facilities.">
+<link rel="icon" type="image/png" href="../assets/images/profile/fav.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Christopher Gnanadurai — home">
+      <span class="brand-mark"><img src="../assets/images/profile/fav.png" alt=""></span>
+      <span class="brand-name">
+        <span class="brand-name-primary">Christopher Gnanadurai</span>
+        <span class="brand-name-role">Director of Product Design</span>
+      </span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#work" class="is-active">Work</a>
+      <a href="../index.html#leadership">Leadership</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="btn-talk" href="../index.html#contact">Let's talk</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#leadership">Leadership</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<article>
+    <header class="case-hero case-card--indigo">
+      <div class="wrap wrap--narrow">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Projects
+        </a>
+        <div class="case-tags-row">
+          <div class="case-tags"><span class="case-tag">Research</span><span class="case-tag">2022</span></div>
+        </div>
+        <h2 id="cs-appointment-manager-title">Appointment Manager: Self-Service Scheduling</h2>
+        <p class="lede">Replacing phone-and-email scheduling chaos with a self-service platform that lets carriers and facilities coordinate appointments directly.</p>
+        <p class="role">Design Leadership · Product Research · UX Design</p>
+      </div>
+    </header>
+
+    <div class="article">
+      <h3>Problem statement</h3>
+      <figure><img src="../assets/images/case-studies/appointment-manager/problem-statement.png" alt="Current process and pain points for appointment scheduling"></figure>
+
+      <h3>Current process</h3>
+      <p>Appointment scheduling is a collaborative process between the facilities and the carriers. This process is currently manual in most of the facilities.</p>
+      <ul>
+        <li>A shipment is planned and tendered out for a carrier to accept the tender.</li>
+        <li>Once the tender is accepted by the carrier, the carrier will have to coordinate with the pickup and delivery facilities to schedule appointments.</li>
+        <li>The carrier will reach out to the facility via phone or email with the PO# / Shipment # and a preferred timing. The facilities usually use an excel sheet to maintain all appointments. They check their schedule and get back to the carrier with a confirmation. There is usually 2-3 email exchanges before an appointment is finalised.</li>
+        <li>Rescheduling and cancelling of appointments also follows a similar process.</li>
+      </ul>
+
+      <h3>What is Appointment Manager?</h3>
+      <p>Appointment Manager (AM) is a product that can be used at a facility level to enable appointment scheduling for shipments at a facility for delivery or pickup. It allows facilities and carriers to coordinate and seamlessly schedule and manage appointments.</p>
+      <figure><img src="../assets/images/case-studies/appointment-manager/what-is-am.png" alt="What is Appointment Manager overview"></figure>
+      <figure><img src="../assets/images/case-studies/appointment-manager/why-fourkites-am.png" alt="Why FourKites Appointment Manager?"></figure>
+      <figure><img src="../assets/images/case-studies/appointment-manager/fourkites-am.png" alt="FourKites Appointment Manager overview"></figure>
+
+      <h3>Discovery — Market Research</h3>
+      <p><strong>Objective:</strong> This document serves as a Market Research document Appointment Manager. It provides insights into the ground work on facilities, their scheduling process, pain points and scope of the product.</p>
+      <p><strong>Case Study:</strong> We have spoke to few of our customer's on how their warehouses/DC's to get insight into the existing Appointment scheduling process, pain points and finalise our target customers for the initial phase.</p>
+      <ul>
+        <li>Carrier Corporation</li>
+        <li>Cargil - Charlotte Facility</li>
+        <li>Unilever</li>
+        <li>Coca Cola</li>
+        <li>Kraft Heniz</li>
+      </ul>
+
+      <h3>Customer personas</h3>
+      <p>Below are the different personas who will use Appointment Manager. Please note that the track and trace users are NOT usually the users who will be using Appointment Manager. This is a facility and carrier facing product.</p>
+      <table>
+        <tr><th>Persona</th><th>Profile</th></tr>
+        <tr><td>Appointment Scheduler</td><td>Primary persona who manager appointments at a facility. Each facility works differently and they can call this persona with different names.</td></tr>
+        <tr><td>Facility Manager</td><td>Facility Manager can also be involved in scheduling or will be responsible for managing the facility operations and will want visibility into appointments.</td></tr>
+        <tr><td>Security Guard / Warehouse Manager</td><td>The security guard at the gate will require at least read only access for all confirmed appointments for a day and last minute changes so that they can validate the trucks that check in and check out at the facility. Similarly Warehouse manager will require visibility into the scheduled appointments and last minute changes to manage the same.</td></tr>
+        <tr><td>Scheduler - Carrier</td><td>Primary persona at the carrier side who is responsible for reaching out to the facility to schedule an appointment.</td></tr>
+        <tr><td>Scheduler - Customer / Vendor</td><td>Primary persona at the customer side who is responsible for reaching out to the facility to schedule appointments. In case of customer pickup (CPU) loads or vendor managed loads, where the customer or vendor is responsible for picking up or delivering that load, it also happens that the customers/vendors reach out to the facilities to book appointments.</td></tr>
+      </table>
+
+      <p><strong>Warehouse Manager</strong></p>
+      <figure><img src="../assets/images/case-studies/appointment-manager/persona-warehouse-manager.png" alt="Warehouse Manager persona profile"></figure>
+
+      <p><strong>Logistics Manager</strong></p>
+      <figure><img src="../assets/images/case-studies/appointment-manager/persona-logistics-manager.png" alt="Logistics Manager persona profile"></figure>
+
+      <p><strong>Gate Guard</strong></p>
+      <figure><img src="../assets/images/case-studies/appointment-manager/persona-gate-guard.png" alt="Gate Guard persona profile"></figure>
+
+      <h3>Competitive analysis</h3>
+      <ul>
+        <li>C3 Solutions</li>
+        <li>Data Docks</li>
+        <li>One Network</li>
+        <li>Descartes Appointment Scheduling</li>
+      </ul>
+
+      <p><strong>Existing Process</strong></p>
+      <figure><img src="../assets/images/case-studies/appointment-manager/competitive-existing-process.png" alt="Existing appointment scheduling process diagram"></figure>
+
+      <p><strong>Proposed Model</strong></p>
+      <figure><img src="../assets/images/case-studies/appointment-manager/competitive-proposed-model.png" alt="Proposed Appointment Manager model diagram"></figure>
+
+      <h3>Opportunity canvas</h3>
+      <figure><img src="../assets/images/case-studies/appointment-manager/opportunity-canvas.png" alt="Appointment Manager opportunity canvas"></figure>
+
+      <h3>Key findings (big ideas)</h3>
+      <ul>
+        <li>Eliminate The need For Manual Scheduling</li>
+        <li>Accurate ETAs Powered with FourKites Core Platform</li>
+        <li>Reduce Detention Costs</li>
+        <li>Gain Capacity by Becoming a preferred Shipper</li>
+        <li>Achieve Sustainability Score</li>
+      </ul>
+
+      <h3>Product flow</h3>
+      <figure><img src="../assets/images/case-studies/appointment-manager/product-flow.png" alt="Appointment Manager end-to-end product flow"></figure>
+
+      <h3>Hi-Fi designs — Shipper Portal</h3>
+      <figure><img src="../assets/images/case-studies/appointment-manager/shipper-portal-list.png" alt="Shipper Portal — list view"></figure>
+      <figure><img src="../assets/images/case-studies/appointment-manager/shipper-portal-calendar.png" alt="Shipper Portal — calendar view"></figure>
+      <figure><img src="../assets/images/case-studies/appointment-manager/appointment-detail-view.png" alt="Appointment detail view"></figure>
+
+      <h3>Carrier Portal</h3>
+      <figure><img src="../assets/images/case-studies/appointment-manager/carrier-portal-list.png" alt="Carrier Portal — list view"></figure>
+      <figure><img src="../assets/images/case-studies/appointment-manager/carrier-portal-board.png" alt="Carrier Portal — board view"></figure>
+      <figure><img src="../assets/images/case-studies/appointment-manager/carrier-detail-view.png" alt="Carrier Portal — detail view"></figure>
+
+      <h3>Customer testimonials</h3>
+      <blockquote>"We are scheduling approximately 1200 appointments per month in Appointment Manager, resulting in 300 fewer emails per day and 480 minutes of saved time daily (8 minutes per appointment). In addition to the email and time savings, on-time delivery on live unload shipments has improved by 10% due to the ability to secure the live load pick up in a timely manner."<br><cite>— Tony Poole, Senior Transportation Manager at Kimberly-Clark</cite></blockquote>
+      <blockquote>"FourKites' Appointment Manager, which is the first universal platform that integrates with all of our systems, would save our dispatchers approximately eight hours a week, and allow them to shift their focus to higher-value tasks."<br><cite>— Sanford Gruhn, Director of Sales, K&amp;B Transportation, Inc</cite></blockquote>
+      <blockquote>"The simplicity of the user interface made it that much easier for both our DC associates and carriers to use. They're eager to use it because it shaves so much time off their day."<br><cite>— Jane Kennedy, Manager of Carrier Relations and Inbound Freight, Michaels</cite></blockquote>
+      <div class="article-end-cta">
+        <a class="btn-back-projects" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Projects
+        </a>
+      </div>
+    </div>
+
+</article>
+
+<nav class="next-case" aria-label="Case study navigation">
+  <a class="next-case-inner" href="developer-portal.html">
+    <div>
+      <span class="next-case-label">Next case study</span>
+      <p class="next-case-title">Developer Portal: A Self-Service API Hub</p>
+    </div>
+    <span class="next-case-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-headline">Let's build something<br>worth shipping.</p>
+        <a class="footer-cta" href="mailto:christopher.gnanadurai@gmail.com">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:christopher.gnanadurai@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/christopher1212" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 D. Christopher Gnanadurai</p>
+      <p>Director of Product Design · Based in India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
