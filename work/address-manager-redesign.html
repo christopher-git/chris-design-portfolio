@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Address Manager: Geofence Audit & Redesign — Chris Gnanadurai</title>
+<title>Address Manager: Geofence Audit & Redesign · Chris Gnanadurai</title>
 <meta name="description" content="A usage audit and redesign of the Address Manager tool, driven by geofence-recommendation data and customer time-on-task.">
 <link rel="icon" type="image/png" href="../assets/images/profile/fav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="../index.html" aria-label="Christopher Gnanadurai — home">
+    <a class="brand" href="../index.html" aria-label="Christopher Gnanadurai home">
       <span class="brand-mark"><img src="../assets/images/profile/fav.png" alt=""></span>
       <span class="brand-name">
         <span class="brand-name-primary">Christopher Gnanadurai</span>
@@ -23,12 +23,10 @@
       </span>
     </a>
     <nav class="primary-nav" aria-label="Primary">
-      <a href="../index.html">Home</a>
       <a href="../index.html#work" class="is-active">Work</a>
       <a href="../index.html#leadership">Leadership</a>
       <a href="../index.html#experience">Experience</a>
       <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
     </nav>
     <a class="btn-talk" href="../index.html#contact">Let's talk</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -36,12 +34,10 @@
     </button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile">
-    <a href="../index.html">Home</a>
     <a href="../index.html#work">Work</a>
     <a href="../index.html#leadership">Leadership</a>
     <a href="../index.html#experience">Experience</a>
     <a href="../index.html#about">About</a>
-    <a href="../index.html#contact">Contact</a>
   </nav>
 </header>
 
@@ -57,27 +53,89 @@
         </div>
         <h2 id="cs-address-manager-redesign-title">Address Manager: Geofence Audit &amp; Redesign</h2>
         <p class="lede">A usage audit and redesign of FourKites' Address Manager, driven by geofence-recommendation performance and real customer time-on-task data.</p>
-        <p class="role">UX Audit · Interaction Design · Data-Driven Redesign</p>
+        <p class="role">UX Audit · Interaction Design · Data-Driven Redesign · 2 minute read</p>
       </div>
     </header>
 
     <div class="article">
-      <h3>Starting from data, not assumptions</h3>
-      <p>Address Manager lets FourKites customers manage and maintain every stop address in their network — pickup, delivery, and yard facilities — and define the geofences used to detect arrivals and departures. Rather than redesigning from intuition, I started with a UX audit of real usage: customers were spending an average of 9 minutes 13 seconds a day on the Address home page, and I pulled the ten highest-traffic accounts (Unilever, Dow Chemical, Averitt Express, Penske, Niagara Bottling, and others) to see exactly which features they touched most and where they got stuck.</p>
+      <h3>What is Address Manager?</h3>
+      <p>Address Manager lets FourKites customers manage and maintain every stop address in their network: pickup, delivery, and yard facilities. Every time a customer adds a pickup or delivery stop for a load, the address is automatically updated in Address Manager. Customers can also define stop-specific business hours and load/unload time, and track the success rating of the geofences in use.</p>
+      <ul>
+        <li>Stores all the stop addresses</li>
+        <li>Lets customers define the geofence for each address, which helps detect arrivals and departures</li>
+      </ul>
 
+      <h3>UX auditing</h3>
+      <p><strong>Home page:</strong> average time spent on the Address home page was 9m 13s per day. I pulled usage data for the top 10 customers by traffic over the prior 180 days, Unilever, Dow Chemical, Averitt Express Supply Chain Solutions, Penske Managed Transportation, Niagara Bottling, A-Z Trucking, Nestlé Mexico, Odyssey Logistics, C&amp;S Wholesale, and Kimberly-Clark LATAM, to see exactly which features they touched most and where they got stuck.</p>
+
+      <p><strong>Most used features on the page</strong></p>
       <div class="image-grid image-grid--2">
-        <img src="../assets/images/case-studies/address-manager-redesign/card-view.png" alt="Address Manager redesigned card view">
-        <img src="../assets/images/case-studies/address-manager-redesign/detail-view.png" alt="Address Manager redesigned detail view">
+        <img src="../assets/images/case-studies/address-manager-redesign/most-used-features-1.png" alt="Most used features on the Address Manager home page, view 1">
+        <img src="../assets/images/case-studies/address-manager-redesign/most-used-features-2.png" alt="Most used features on the Address Manager home page, view 2">
+      </div>
+      <div class="image-grid image-grid--2">
+        <img src="../assets/images/case-studies/address-manager-redesign/most-used-features-3.png" alt="Most used features on the Address Manager home page, view 3">
+        <img src="../assets/images/case-studies/address-manager-redesign/most-used-features-4.png" alt="Most used features on the Address Manager home page, view 4">
       </div>
 
-      <h3>The geofence problem</h3>
-      <p>Geofences — the virtual boundary FourKites uses to detect a truck's arrival or departure at a stop — were being manually drawn and frequently misconfigured, which degraded tracking accuracy across the network. The redesign introduced a recommended-geofence feature: suggestions based on a customer's own geofence performance history and on better-performing geofences already in use at the same physical location elsewhere in the FourKites network.</p>
+      <h3>Usage in a nutshell</h3>
+      <p><strong>Total usage summary</strong></p>
+      <figure><img src="../assets/images/case-studies/address-manager-redesign/usage-total-summary.png" alt="Total usage summary for Address Manager"></figure>
 
-      <h3>Goals grounded in a baseline</h3>
-      <p>Every design decision was tied to a measurable target set against the audit's baseline: cut average time spent managing addresses from 9.75 to 8.8 minutes per month, and lift adoption of recommended geofences from a 24% baseline to a 70% goal across shippers with recommendations available.</p>
+      <p><strong>Top 10 features by views</strong></p>
+      <figure><img src="../assets/images/case-studies/address-manager-redesign/top-10-features-by-views.png" alt="Top 10 Address Manager features by views"></figure>
+
+      <p><strong>Top 10 features summary</strong></p>
+      <figure><img src="../assets/images/case-studies/address-manager-redesign/top-10-features-summary.png" alt="Top 10 Address Manager features, summary view"></figure>
+
+      <p><strong>Task flow</strong></p>
+      <figure><img src="../assets/images/case-studies/address-manager-redesign/usage-task-flow.png" alt="Address Manager task flow"></figure>
+
+      <p><strong>Usage metrics</strong></p>
+      <div class="image-grid image-grid--3">
+        <img src="../assets/images/case-studies/address-manager-redesign/usage-metrics-1.png" alt="Address Manager usage metrics, view 1">
+        <img src="../assets/images/case-studies/address-manager-redesign/usage-metrics-2.png" alt="Address Manager usage metrics, view 2">
+        <img src="../assets/images/case-studies/address-manager-redesign/usage-metrics-3.png" alt="Address Manager usage metrics, view 3">
+      </div>
+
+      <h3>FourKites recommended geofence</h3>
+      <p><strong>Feature goals:</strong></p>
+      <ul>
+        <li>Provide geofence recommendations based on the customer's own geofence performance and on better-performing geofences already in use at the same location elsewhere in the FourKites network</li>
+        <li>Improve the success percentage of geofence entries through FourKites' recommendations</li>
+      </ul>
+      <p><strong>Feature success metrics:</strong></p>
+      <ul>
+        <li>Average geofence success improvement</li>
+        <li>Average reduction in geofence size</li>
+        <li>Additional geofence entries captured with recommendations</li>
+        <li>Expirations prevented with recommendations</li>
+      </ul>
+      <figure><img src="../assets/images/case-studies/address-manager-redesign/geofence-recommendation-goals.png" alt="FourKites recommended geofence feature goals and success metrics"></figure>
+
+      <h3>UX goal</h3>
+      <p><strong>Both goals ladder up to the same north star:</strong> delight customers by delivering measurable value, making them heroes within their organizations, and enabling them as our biggest advocates.</p>
+      <table>
+        <tr><th>Goal</th><th>Objective</th><th>Key result</th><th>Baseline</th><th>Target</th></tr>
+        <tr><td>1</td><td>Decrease customer investment needed to successfully track</td><td>Decrease time spent managing addresses in Address Manager by 10% (avg. minutes/month)</td><td>9.75 min</td><td>8.8 min</td></tr>
+        <tr><td>2</td><td>Improve tracking consistency by increasing geofence success rates</td><td>Improve adoption of recommended geofences to 70% of shippers with available recommendations</td><td>24%</td><td>70%</td></tr>
+      </table>
+
+      <h3>Proposed design</h3>
+      <p><strong>Card view</strong></p>
+      <figure><img src="../assets/images/case-studies/address-manager-redesign/card-view.png" alt="Address Manager redesigned card view"></figure>
+
+      <p><strong>List view</strong></p>
+      <figure><img src="../assets/images/case-studies/address-manager-redesign/proposed-list-view.png" alt="Address Manager redesigned list view"></figure>
+
+      <p><strong>Detail view</strong></p>
+      <div class="image-grid image-grid--2">
+        <img src="../assets/images/case-studies/address-manager-redesign/detail-view.png" alt="Address Manager redesigned detail view, panel 1">
+        <img src="../assets/images/case-studies/address-manager-redesign/detail-view-2.png" alt="Address Manager redesigned detail view, panel 2">
+      </div>
 
       <h3>Impact</h3>
-      <p>By replacing manual geofence drawing with data-backed recommendations and simplifying the card, list, and detail views around the features customers actually used, the redesign directly targeted the two levers that mattered most: less time spent on a task customers didn't want to be doing, and higher-quality geofences that improve tracking accuracy for every downstream customer relying on that data.</p>
+      <p>By replacing manual geofence drawing with data-backed recommendations and simplifying the card, list, and detail views around the features customers actually used, the redesign targeted the two levers that mattered most: less time spent on a task customers didn't want to be doing, and higher-quality geofences that improve tracking accuracy for every downstream customer relying on that data.</p>
       <div class="article-end-cta">
         <a class="btn-back-projects" href="../index.html#work">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

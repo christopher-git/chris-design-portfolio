@@ -192,6 +192,7 @@ button {
   display: none;
   align-items: center;
   gap: 0.25rem;
+  margin-left: auto;
 }
 @media (min-width: 768px) {
   .primary-nav {
@@ -1683,7 +1684,7 @@ a.contact-row:hover .contact-row-value {
 
 .article {
   margin: 0 auto;
-  max-width: var(--max-width-article);
+  max-width: 54rem;
   padding: 4rem 1.5rem;
 }
 @media (min-width: 640px) {
@@ -1695,12 +1696,12 @@ a.contact-row:hover .contact-row-value {
   margin-top: 3rem;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   letter-spacing: -0.01em;
 }
 @media (min-width: 640px) {
   .article h3 {
-    font-size: 1.75rem;
+    font-size: 1.9375rem;
   }
 }
 .article h3:first-child {
@@ -1748,23 +1749,30 @@ a.contact-row:hover .contact-row-value {
 }
 .article p {
   margin-top: 1.25rem;
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 1.0625rem;
+  line-height: 1.78;
   color: rgba(11, 11, 15, 0.75);
 }
 @media (min-width: 640px) {
   .article p {
-    font-size: 1.125rem;
+    font-size: 1.1875rem;
   }
 }
 .article ul {
   margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.65rem;
   padding-left: 1.25rem;
   list-style: disc;
+  font-size: 1.0625rem;
+  line-height: 1.7;
   color: rgba(11, 11, 15, 0.75);
+}
+@media (min-width: 640px) {
+  .article ul {
+    font-size: 1.1875rem;
+  }
 }
 .article ul li::marker {
   color: var(--color-coral-text);
@@ -1796,7 +1804,7 @@ a.contact-row:hover .contact-row-value {
   border-left: 4px solid var(--color-coral);
   background: rgba(255, 90, 54, 0.05);
   padding: 1.25rem 1.5rem;
-  font-size: 1.125rem;
+  font-size: 1.1875rem;
   font-style: italic;
   color: rgba(11, 11, 15, 0.8);
 }
@@ -1824,6 +1832,66 @@ a.contact-row:hover .contact-row-value {
 }
 .article .testimonial-grid blockquote {
   margin: 0;
+}
+.article .testimonial-logo {
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 0.875rem;
+}
+.article .rating-banner {
+  margin: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.article .rating-banner-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0;
+}
+.article .rating-banner-stores {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: rgba(11, 11, 15, 0.55);
+  letter-spacing: 0.01em;
+}
+.article .review-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+@media (min-width: 720px) {
+  .article .review-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.article .review-card {
+  border: 1px solid rgba(11, 11, 15, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--color-paper);
+}
+.article .review-stars {
+  color: #f5b400;
+  font-size: 1.125rem;
+  letter-spacing: 0.15em;
+}
+.article .review-title {
+  margin: 0.75rem 0 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+.article .review-body {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(11, 11, 15, 0.65);
 }
 .article figure {
   margin: 2rem 0;
@@ -2070,12 +2138,12 @@ a.contact-row:hover .contact-row-value {
   width: 100%;
   margin: 1.5rem 0;
   border-collapse: collapse;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 .article th,
 .article td {
   border: 1px solid rgba(11, 11, 15, 0.12);
-  padding: 0.65rem 0.85rem;
+  padding: 0.75rem 0.95rem;
   text-align: left;
 }
 .article th {
