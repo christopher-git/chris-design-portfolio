@@ -42,7 +42,10 @@
 </header>
 
 <article>
-    <header class="case-hero case-card--coral">
+    <header class="case-hero case-hero--photo">
+      <div class="case-hero-media">
+        <img src="../assets/images/case-studies/digital-workforce-ai-agents/hero-team.jpg" alt="Portraits of the six FourKites Digital Workforce agents: Tracy, Sam, Alan, Cassie, Polly, and Sophie">
+      </div>
       <div class="wrap wrap--narrow">
         <a class="back-link" href="../index.html#work">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -52,22 +55,23 @@
           <div class="case-tags"><span class="case-tag">AI</span><span class="case-tag">2025</span></div>
         </div>
         <h2 id="cs-digital-workforce-ai-agents-title">Digital Workforce: AI Agents for Supply Chain Ops</h2>
-        <p class="lede">Design strategy for four AI agents (Tracy, Sam, Alan, and Polly) that cut manual workload 50% and lifted enterprise adoption to 85% in six months.</p>
-        <p class="role">Director of User Experience · Strategy to Launch · 3 minute read</p>
+        <p class="lede">Design strategy for four AI agents (Tracy, Sam, Alan, and Polly) that cut manual workload 50% and lifted enterprise adoption to 85% in six months, now grown into a six-agent digital workforce running at Fortune 500 scale.</p>
+        <p class="role">Director of User Experience · Strategy to Launch · 6 minute read</p>
       </div>
     </header>
 
     <div class="article">
       <h3>Overview</h3>
-      <p>As Director of User Experience, I led the design strategy for FourKites' AI-powered digital workforce, a suite of agents (Tracy, Sam, Alan, and Polly) that transform supply chain operations. In just 6 months, we achieved a 50% reduction in manual workload, a 20% improvement in tracking quality, and an 85% enterprise adoption rate.</p>
+      <p>As Director of User Experience, I led the design strategy for FourKites' AI-powered digital workforce, a suite of agents (Tracy, Sam, Alan, and Polly) that transform supply chain operations. In just 6 months, we achieved a <mark>50% reduction in manual workload</mark>, a <mark>20% improvement in tracking quality</mark>, and an <mark>85% enterprise adoption rate</mark>.</p>
       <p><strong>Role:</strong> Director of User Experience<br>
       <strong>Timeline:</strong> 6 months (Strategy to Launch)<br>
       <strong>Team:</strong> 4 designers, 2 researchers<br>
-      <strong>Business Impact:</strong> $15M+ customer value, 3x increase in enterprise deal size</p>
+      <strong>Business Impact:</strong> <mark>$15M+ customer value</mark>, <mark>3x increase</mark> in enterprise deal size</p>
+      <p>That launch turned out to be the foundation, not the finish line. The digital workforce I helped design and ship has since grown to six named agents in production, executing <mark>2.5M+ actions a month</mark> and covering <mark>152 outcomes</mark> across five supply chain domains. The rest of this case study covers the four agents I led design for directly, how the platform they belong to has evolved since, and the results at both scales.</p>
 
       <h3>The challenge</h3>
-      <p>Supply chain teams were spending 15-20 hours weekly on repetitive manual tasks: document collection, appointment scheduling, carrier coordination. Our enterprise customers couldn't scale operations without proportionally increasing headcount.</p>
-      <p><strong>Key Insight:</strong> Through customer research, I discovered that 87% of supply chain inefficiencies stemmed from communication gaps that could be augmented by AI, not replaced by it.</p>
+      <p>Supply chain teams were spending <mark>15-20 hours weekly</mark> on repetitive manual tasks: document collection, appointment scheduling, carrier coordination. Our enterprise customers couldn't scale operations without proportionally increasing headcount.</p>
+      <p><strong>Key Insight:</strong> Through customer research, I discovered that <mark>87% of supply chain inefficiencies</mark> stemmed from communication gaps that could be augmented by AI, not replaced by it.</p>
       <p><strong>Strategic Vision:</strong></p>
       <ul>
         <li>Elevate humans to strategic work, not replace them</li>
@@ -93,45 +97,118 @@
         <li>Facilitated workshops with enterprise customers (Unilever, Smithfield Foods, Arrow Electronics) to test and refine AI agent workflows.</li>
       </ul>
 
-      <h3>The AI agents</h3>
-      <figure><img src="../assets/images/case-studies/digital-workforce-ai-agents/agents-overview.png" alt="Overview of the four AI agents: Tracy, Sam, Alan, and Polly"></figure>
+      <h3>Meet the digital workforce</h3>
+      <p>Four agents, each built for a specific point of failure in manual supply chain coordination.</p>
+      <div class="agent-grid">
+        <div class="agent-card">
+          <img class="agent-card-photo" src="../assets/images/case-studies/digital-workforce-ai-agents/agent-tracy.jpg" alt="Tracy, carrier operations agent">
+          <div class="agent-card-body">
+            <p class="agent-card-name">Tracy</p>
+            <p class="agent-card-role">Carrier Operations · Track &amp; Trace Specialist</p>
+            <ul>
+              <li>Automates shipment visibility and carrier compliance through multi-channel outreach: email, WhatsApp, voice, and SMS.</li>
+              <li>Reconciles ML-predicted ETAs against carrier signals, confirms milestones, and escalates exceptions on her own.</li>
+              <li>Impact: resolves <mark>75% of exceptions</mark> autonomously today; improved tracking quality <mark>20% in the first 4 weeks</mark>; saved <mark>2–3 hours/day</mark> per manager.</li>
+              <li>UX focus: bi-directional carrier communication, configurable workflows, transparency dashboards.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="agent-card">
+          <img class="agent-card-photo" src="../assets/images/case-studies/digital-workforce-ai-agents/agent-sam.jpg" alt="Sam, supplier operations agent">
+          <div class="agent-card-body">
+            <p class="agent-card-name">Sam</p>
+            <p class="agent-card-role">Supplier Operations · Supplier Collaboration Expert</p>
+            <ul>
+              <li>Parses supplier email and PDF documents across formats, auto-creates shipments, links them to purchase orders, and flags exceptions on incomplete data.</li>
+              <li>Impact: <mark>70% reduction</mark> in manual document processing at <mark>95%+ extraction accuracy</mark>; onboarding time cut from months to days.</li>
+              <li>UX focus: conversational interfaces for suppliers, error prevention through real-time validation, AI explainability.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="agent-card">
+          <img class="agent-card-photo" src="../assets/images/case-studies/digital-workforce-ai-agents/agent-alan.jpg" alt="Alan, facility operations agent">
+          <div class="agent-card-body">
+            <p class="agent-card-name">Alan</p>
+            <p class="agent-card-role">Facility Operations · Appointment Scheduling Assistant</p>
+            <ul>
+              <li>ETA-driven dock appointment automation: creates, reschedules, and confirms appointments as shipment status changes, integrating directly with carrier and yard systems.</li>
+              <li>Impact: piloted at US Cold Storage to an <mark>87% automation success rate</mark> and <mark>96% scheduling accuracy</mark>; at production scale, <mark>28% improvement</mark> in dock appointment adherence and <mark>35% reduction</mark> in driver wait times.</li>
+              <li>UX focus: multi-channel orchestration, intelligent prioritization, proactive exception handling. Read the full <a href="ai-agent-alan.html">AI Agent Alan case study</a>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="agent-card">
+          <img class="agent-card-photo" src="../assets/images/case-studies/digital-workforce-ai-agents/agent-polly.png" alt="Polly, compliance and documentation agent">
+          <div class="agent-card-body">
+            <p class="agent-card-name">Polly</p>
+            <p class="agent-card-role">Compliance &amp; Documentation · Document Compliance Manager</p>
+            <ul>
+              <li>Runs a persistent, multi-channel chase for proof-of-delivery documents, then validates and files them automatically.</li>
+              <li>Impact: zero-touch POD collection; reduced manual effort by <mark>15–20 hours/week</mark>; improved compliance rates, including automated customs documentation.</li>
+              <li>UX focus: trust-building workflows, escalation transparency, flexible integrations (email, APIs, SFTP).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <p><strong>Tracy (Track &amp; Trace Specialist)</strong></p>
+      <h3>The team has grown</h3>
+      <p>Two more agents have joined since this project shipped, extending the same design principles (trust, transparency, configurability) into new domains I didn't design directly, but that carry the model forward.</p>
+      <div class="agent-grid">
+        <div class="agent-card">
+          <img class="agent-card-photo" src="../assets/images/case-studies/digital-workforce-ai-agents/agent-cassie.jpg" alt="Cassie, customer operations agent">
+          <div class="agent-card-body">
+            <p class="agent-card-name">Cassie</p>
+            <p class="agent-card-role">Customer Operations</p>
+            <ul>
+              <li>Triages customer email and chat with full shipment context, then answers WISMO ("Where Is My Order") questions with carrier-grade ETAs.</li>
+              <li>Escalates to a human with the full conversation history attached when a question needs one.</li>
+              <li>Impact: customer response time cut from <mark>90+ minutes to under 30 seconds</mark>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="agent-card">
+          <img class="agent-card-photo" src="../assets/images/case-studies/digital-workforce-ai-agents/agent-sophie.jpg" alt="Sophie, the AI developer agent that builds new workflows">
+          <div class="agent-card-body">
+            <p class="agent-card-name">Sophie</p>
+            <p class="agent-card-role">Workflow Development · AI Developer Agent</p>
+            <ul>
+              <li>An agent that builds agents: compiles a plain-English business requirement into an Agent Operating Procedure, then assigns the work to an existing agent or stands up a new one.</li>
+              <li>Positioning: production workflows in <mark>days, not months</mark>, with no code and no consulting engagement required.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3>Three ways intelligence reaches the team</h3>
+      <p>The trust and configurability principles I set for Tracy, Sam, Alan, and Polly eventually generalized into a platform-wide model for how any user gets intelligence out of the system, not just from an agent executing a task, but from asking a question or simply opening the app.</p>
       <ul>
-        <li>Automates shipment visibility and carrier compliance.</li>
-        <li>Impact: Improved tracking quality by 20% in 4 weeks; saved 2–3 hours/day per manager.</li>
-        <li>UX Focus: Seamless bi-directional communication with carriers, configurable workflows, and transparency dashboards.</li>
-      </ul>
-      <p><strong>Sam (Supplier Collaboration Expert)</strong></p>
-      <ul>
-        <li>Automates supplier onboarding and document processing.</li>
-        <li>Impact: Reduced onboarding time from months to days; lowered IT integration costs.</li>
-        <li>UX Focus: Conversational interfaces for suppliers, error-prevention through real-time validation, and AI explainability.</li>
-      </ul>
-      <p><strong>Alan (Appointment Scheduling Assistant)</strong></p>
-      <ul>
-        <li>Automates end-to-end scheduling and rescheduling.</li>
-        <li>Impact: Reduced scheduling workload by 50%; minimized penalties for missed appointments.</li>
-        <li>UX Focus: Multi-channel orchestration (email, portals, TMS), intelligent prioritization, proactive exception handling.</li>
-      </ul>
-      <p><strong>Polly (Document Compliance Manager)</strong></p>
-      <ul>
-        <li>Automates collection and matching of proof-of-delivery documents.</li>
-        <li>Impact: Reduced manual effort by 15–20 hours/week, improved compliance rates.</li>
-        <li>UX Focus: Trust-building workflows, escalation transparency, and flexible integrations (email, APIs, SFTP).</li>
+        <li><strong>Ask (Conversational Intelligence):</strong> ask any question about the supply chain in plain language and get back data, visualizations, and recommendations grounded in FourKites' network graph, with a one-click path to turn that question into a standing workflow for Tracy to monitor.</li>
+        <li><strong>See (Gen UI):</strong> the interface generates a custom view per person, per role, automatically. A VP sees revenue at risk, a coordinator sees today's exceptions by severity, a dock supervisor sees the next four hours. Same platform, same moment, three views, no configuration.</li>
+        <li><strong>Receive (Intelligence Delivery):</strong> proactive intelligence delivered into the tools teams already use: scorecards, supplier reports, disruption alerts, and connectors into PowerBI, Tableau, Snowflake, and Databricks.</li>
       </ul>
 
       <h3>Impact &amp; results</h3>
+      <p><strong>What shipped in the first 6 months:</strong></p>
       <table>
         <tr><th>Metric</th><th>Before</th><th>After</th><th>Change</th></tr>
-        <tr><td>Manual Task Time</td><td>20 hrs/week</td><td>2 hrs/week</td><td>-90%</td></tr>
-        <tr><td>Tracking Accuracy</td><td>72%</td><td>94%</td><td>+22%</td></tr>
-        <tr><td>Document Compliance</td><td>65%</td><td>94%</td><td>+29%</td></tr>
+        <tr><td>Manual Task Time</td><td>20 hrs/week</td><td>2 hrs/week</td><td><mark>-90%</mark></td></tr>
+        <tr><td>Tracking Accuracy</td><td>72%</td><td>94%</td><td><mark>+22%</mark></td></tr>
+        <tr><td>Document Compliance</td><td>65%</td><td>94%</td><td><mark>+29%</mark></td></tr>
+      </table>
+      <p><strong>At platform scale today,</strong> the six-agent digital workforce runs <mark>2.5M+ actions a month</mark> (cumulative since February 2025) across <mark>152 outcomes</mark> in five domains:</p>
+      <table>
+        <tr><th>Domain</th><th>Outcomes</th><th>Examples</th></tr>
+        <tr><td>Network Intelligence</td><td>44</td><td>Carrier performance scorecards, geographic risk intelligence, real-time inventory position</td></tr>
+        <tr><td>Global Movement</td><td>37</td><td>Automated POD collection, centralized document management, intelligent notifications</td></tr>
+        <tr><td>Supply Resilience</td><td>30</td><td>AI-powered PO-to-booking, ETA-driven appointment automation, SKU-level risk intelligence</td></tr>
+        <tr><td>Site Intelligence</td><td>26</td><td>Zero-blind-spot yard ops, multi-site capacity planning, appointment automation</td></tr>
+        <tr><td>Customer Fulfillment</td><td>15</td><td>OTIF revenue protection, curated customer experience, branded tracking portal</td></tr>
       </table>
 
       <h3>Customer testimonials</h3>
       <blockquote>"Tracy brought agility to our teams... like augmenting FourKites visibility with an additional pair of eyes 24/7."<br><cite>Mohammed Mirza, Unilever</cite></blockquote>
       <blockquote>"This enabled us to focus on higher value activities rather than chasing emails."<br><cite>Annabelle Torres, Smithfield Foods</cite></blockquote>
+      <blockquote>"Alan booked 87% of our appointments successfully and 96% of those on the customer's requested delivery date. Our team was amazed an appointment could be made with no human interaction."<br><cite>Keith Mowery, EVP, United States Cold Storage</cite></blockquote>
 
       <h3>Digital workforce designs</h3>
       <figure><img src="../assets/images/case-studies/digital-workforce-ai-agents/dashboard.png" alt="Digital Workforce monitoring and auditing dashboard"></figure>
@@ -141,10 +218,6 @@
       <figure><img src="../assets/images/case-studies/digital-workforce-ai-agents/actions.png" alt="AI agent action configuration"></figure>
       <figure><img src="../assets/images/case-studies/digital-workforce-ai-agents/usage.png" alt="AI agent usage analytics"></figure>
 
-      <h3>Related links</h3>
-      <ul>
-        <li><a href="https://www.fourkites.com/fourkites-ai/agentic-ai/" target="_blank" rel="noopener noreferrer">FourKites AI Agents</a></li>
-      </ul>
       <div class="article-end-cta">
         <a class="btn-back-projects" href="../index.html#work">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

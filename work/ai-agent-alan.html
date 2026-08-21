@@ -42,7 +42,10 @@
 </header>
 
 <article>
-    <header class="case-hero case-card--duotone">
+    <header class="case-hero case-hero--photo">
+      <div class="case-hero-media">
+        <img src="../assets/images/case-studies/ai-agent-alan/process-transformation-1.png" alt="Aerial view of a logistics facility loading dock with trucks at the bays">
+      </div>
       <div class="wrap wrap--narrow">
         <a class="back-link" href="../index.html#work">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -53,7 +56,7 @@
         </div>
         <h2 id="cs-ai-agent-alan-title">AI Agent Alan: Automating Logistics Scheduling</h2>
         <p class="lede">Transforming manual appointment coordination into intelligent, 24/7 autonomous operations: FourKites' first autonomous digital worker.</p>
-        <p class="role">Director of UX, FourKites Intelligent Control Tower · 8-week pilot · 4 minute read</p>
+        <p class="role">Director of UX, FourKites Intelligent Control Tower · 8-week pilot · 7 minute read</p>
       </div>
     </header>
 
@@ -63,13 +66,13 @@
       <strong>Team:</strong> Cross-functional collaboration with Product, Engineering, Data Science, and Customer Success.</p>
 
       <h3>Executive summary</h3>
-      <p>Led the UX strategy for AI Agent Alan, FourKites' first autonomous digital worker, solving a multi-billion dollar industry inefficiency in logistics appointment scheduling. Piloted with US Cold Storage (38 facilities nationwide), the solution achieved an 87% automation success rate while processing 600+ shipments across four major retailers, delivering immediate productivity gains and establishing a scalable framework for AI-driven operational transformation.</p>
+      <p>Led the UX strategy for AI Agent Alan, FourKites' first autonomous digital worker, solving a multi-billion dollar industry inefficiency in logistics appointment scheduling. Piloted with US Cold Storage (38 facilities nationwide), the solution achieved an 87% automation success rate while processing 600+ shipments across four major retailers, delivering immediate productivity gains and establishing a scalable framework for AI-driven operational transformation. That pilot design is now shipped: Alan runs in production as FourKites' Facility Operations Agent, operating inside a platform that moves 3.2M shipments a day across 400+ enterprise customers in 234 countries, the scale the trust and transparency patterns from this project were built to hold up under.</p>
 
       <h3>Alan overview</h3>
       <div class="image-grid image-grid--2">
         <img src="../assets/images/case-studies/ai-agent-alan/alan-overview.png" alt="AI Agent Alan overview illustration">
       </div>
-      <p>Alan is a digital worker developed by FourKites to automate the appointment scheduling process across logistics networks. He eliminates the manual inefficiencies of coordinating thousands of shipments, bridging the gap between automation, intelligence, and human-like adaptability.</p>
+      <p>Alan is a digital worker developed by FourKites to automate the appointment scheduling process across logistics networks. He eliminates the manual inefficiencies of coordinating thousands of shipments, bridging the gap between automation, intelligence, and human-like adaptability. In FourKites' current product positioning, Alan is described plainly as a Facility Operations Agent: ETA-driven dock appointment automation that creates, reschedules, and manages appointments based on live shipment status without manual intervention.</p>
 
       <h3>Context &amp; problem</h3>
       <p><strong>Industry Challenge:</strong> Manual appointment scheduling consumes thousands of labor hours across logistics organizations. Each appointment requires repetitive, error-prone coordination over email, portals, and phone calls.</p>
@@ -101,12 +104,159 @@
         <li>Customer portals</li>
         <li>Phone-based scheduling systems</li>
       </ul>
-      <p>He integrates seamlessly with Transportation Management Systems (TMS) and the FourKites Intelligent Control Tower™, ensuring data consistency and real-time updates.</p>
+      <p>He integrates seamlessly with Transportation Management Systems (TMS) and the FourKites Intelligent Control Tower™, ensuring data consistency and real-time updates. The channel mix has kept evolving since the pilot: phone-based fallback handled the long tail of facilities without digital booking during the USCS rollout, while the production version formalizes the same multi-channel principle into email, portal/UI, system-to-system API, and EDI, so Alan can meet a facility however it already does business.</p>
+
+      <h3>How Alan works</h3>
+      <p>Underneath the interface, Alan runs on a continuous loop against FourKites' Shipment Twin, the live digital-twin representation of every shipment's ETA. That loop is what makes the audit-trail and human-override UX in the next section non-negotiable rather than nice-to-have: the system is making scheduling decisions on its own, so the interface is the only place a human can see why, and step in.</p>
+      <div class="step-sequence">
+        <div class="step-sequence-item">
+          <span class="step-sequence-number">01</span>
+          <p class="step-sequence-text">Shipment Twin supplies live ETA updates for all inbound shipments.</p>
+        </div>
+        <div class="step-sequence-item">
+          <span class="step-sequence-number">02</span>
+          <p class="step-sequence-text">Alan compares current ETAs against scheduled appointment windows.</p>
+        </div>
+        <div class="step-sequence-item">
+          <span class="step-sequence-number">03</span>
+          <p class="step-sequence-text">When an ETA shift makes an appointment invalid, Alan identifies the optimal new window based on dock availability, facility capacity, and priority rules.</p>
+        </div>
+        <div class="step-sequence-item">
+          <span class="step-sequence-number">04</span>
+          <p class="step-sequence-text">Alan reschedules the appointment through the appropriate channel: carrier portal API, email, or EDI.</p>
+        </div>
+        <div class="step-sequence-item">
+          <span class="step-sequence-number">05</span>
+          <p class="step-sequence-text">The carrier receives confirmation, and the facility schedule updates automatically.</p>
+        </div>
+        <div class="step-sequence-item">
+          <span class="step-sequence-number">06</span>
+          <p class="step-sequence-text">Unresolvable conflicts escalate to a facility coordinator with full context attached.</p>
+        </div>
+        <div class="step-sequence-item">
+          <span class="step-sequence-number">07</span>
+          <p class="step-sequence-text">Appointment adherence, dock utilization, and dwell-time data feed back in, for continuous optimization.</p>
+        </div>
+      </div>
 
       <h3>Process transformation</h3>
       <p>How AI Agent Alan eliminated manual scheduling inefficiency.</p>
-      <figure><img src="../assets/images/case-studies/ai-agent-alan/process-transformation-1.png" alt="Process transformation: before AI Agent Alan"></figure>
-      <figure><img src="../assets/images/case-studies/ai-agent-alan/process-transformation-2.png" alt="Process transformation: after AI Agent Alan"></figure>
+      <div class="process-compare">
+        <div class="process-compare-panel process-compare-panel--before">
+          <div class="process-compare-head">
+            <span class="process-compare-badge">Before</span>
+            <span class="process-compare-subtitle">Manual, sequential, time-consuming</span>
+          </div>
+          <div class="process-compare-steps">
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Order created</span>
+                <span class="process-compare-step-time">0 min</span>
+              </div>
+              <p class="process-compare-step-desc">New PO in TMS</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Staff assigns</span>
+                <span class="process-compare-step-time">15–30 min</span>
+              </div>
+              <p class="process-compare-step-desc">Manual review &amp; assignment</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Email back &amp; forth</span>
+                <span class="process-compare-step-time">2–24 hrs</span>
+              </div>
+              <p class="process-compare-step-desc">Request, wait for response</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Portal login</span>
+                <span class="process-compare-step-time">10–20 min</span>
+              </div>
+              <p class="process-compare-step-desc">Navigate different systems</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Phone calls</span>
+                <span class="process-compare-step-time">5–15 min</span>
+              </div>
+              <p class="process-compare-step-desc">Confirm details if unclear</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Manual TMS update</span>
+                <span class="process-compare-step-time">5–10 min</span>
+              </div>
+              <p class="process-compare-step-desc">Copy data back to system</p>
+            </div>
+          </div>
+          <div class="process-compare-callout">
+            <p class="process-compare-callout-title">Challenges</p>
+            <ul>
+              <li><strong>3–24+ hours</strong> total cycle time per appointment</li>
+              <li><strong>Sequential processing</strong>, only one appointment at a time</li>
+              <li><strong>High error rate</strong> from manual data entry</li>
+              <li><strong>Staff burnout</strong> from repetitive tasks</li>
+              <li><strong>No night/weekend coverage</strong>, delays accumulate</li>
+            </ul>
+          </div>
+        </div>
+        <div class="process-compare-panel process-compare-panel--after">
+          <div class="process-compare-head">
+            <span class="process-compare-badge">After</span>
+            <span class="process-compare-subtitle">Autonomous, parallel, intelligent</span>
+          </div>
+          <div class="process-compare-steps">
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Order detected</span>
+                <span class="process-compare-step-time">Automated 24/7</span>
+              </div>
+              <p class="process-compare-step-desc">Alan monitors in real time</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Auto-request</span>
+                <span class="process-compare-step-time">Automated 24/7</span>
+              </div>
+              <p class="process-compare-step-desc">Email or portal booking</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">Confirmation</span>
+                <span class="process-compare-step-time">Automated 24/7</span>
+              </div>
+              <p class="process-compare-step-desc">Receives &amp; validates response</p>
+            </div>
+            <div class="process-compare-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="process-compare-step">
+              <div class="process-compare-step-row">
+                <span class="process-compare-step-title">System update</span>
+                <span class="process-compare-step-time">Automated 24/7</span>
+              </div>
+              <p class="process-compare-step-desc">Automatic TMS sync via API</p>
+            </div>
+          </div>
+          <div class="process-compare-callout">
+            <p class="process-compare-callout-title">Impact</p>
+            <ul>
+              <li><strong>Minutes vs. hours</strong>, average booking time reduced 90%</li>
+              <li><strong>150+ parallel appointments</strong> processed simultaneously</li>
+              <li><strong>87% automation success</strong> with 96% accuracy</li>
+              <li><strong>36–40 hours saved</strong> in the 8-week pilot alone</li>
+              <li><strong>24/7 operation</strong>, no delays, no overtime costs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <p><strong>Core Experience Features</strong></p>
       <table>
@@ -118,7 +268,7 @@
         <tr><td>Audit Trail UI</td><td>Every action visible and reversible, building user trust</td></tr>
       </table>
 
-      <h3>Pilot outcome — US Cold Storage</h3>
+      <h3>Pilot outcome: US Cold Storage</h3>
       <p><strong>Metrics from 8-week pilot:</strong></p>
       <ul>
         <li>87% automation success rate</li>
@@ -127,6 +277,11 @@
         <li>36–40 hours saved weekly per facility</li>
       </ul>
       <blockquote>Schedulers described Alan as "invisible but dependable, the best coworker we never hired."</blockquote>
+      <blockquote>"Alan booked 87% of our appointments successfully and 96% of those on the customer's requested delivery date. Our team was amazed an appointment could be made with no human interaction."<br><cite>Keith Mowery, EVP, United States Cold Storage</cite></blockquote>
+
+      <h3>From pilot to platform</h3>
+      <p>The USCS pilot became the proof point FourKites needed to ship Alan as a standing product capability. He's now one of six agents in FourKites' Digital Workforce, which collectively delivers 152 outcomes across five supply chain domains, and the design decisions from this project, the audit trail, the escalation path, the confirmation language, carried forward into that production release largely unchanged. At scale, the same automation model this pilot validated is now producing a 28% improvement in dock adherence and a 35% reduction in driver wait time across the customers running it.</p>
+      <p>See how Alan fits alongside Tracy, Sam, and Polly in the <a href="digital-workforce-ai-agents.html">Digital Workforce case study</a>.</p>
 
       <h3>Ethical &amp; reflexive design</h3>
       <ul>
@@ -183,6 +338,7 @@
       <h3>Related links</h3>
       <ul>
         <li><a href="https://www.fourkites.com/press/us-cold-storage-ai-agent-alan-scheduling-success/?utm_source=linkedin&amp;utm_medium=social&amp;utm_campaign=" target="_blank" rel="noopener noreferrer">US Cold Storage Deploys FourKites AI Agent Alan to Tackle Manual Appointment Scheduling</a></li>
+        <li><a href="https://www.fourkites.ai/digital-workforce/alan" target="_blank" rel="noopener noreferrer">Alan, FourKites Facility Operations Agent (product page)</a></li>
       </ul>
       <div class="article-end-cta">
         <a class="btn-back-projects" href="../index.html#work">

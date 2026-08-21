@@ -24,6 +24,84 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "4193", "--directory", "."],
       "port": 4193
+    },
+    {
+      "name": "chris-portfolio-static-d",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4207", "--directory", "."],
+      "port": 4207
+    },
+    {
+      "name": "chris-portfolio-static-e",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4219", "--directory", "."],
+      "port": 4219
+    },
+    {
+      "name": "chris-portfolio-static-f",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4231", "--directory", "."],
+      "port": 4231
+    },
+    {
+      "name": "chris-portfolio-static-g",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4243", "--directory", "."],
+      "port": 4243
+    },
+    {
+      "name": "chris-portfolio-static-h",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4255", "--directory", "."],
+      "port": 4255
+    },
+    {
+      "name": "chris-portfolio-static-i",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4267", "--directory", "."],
+      "port": 4267
+    },
+    {
+      "name": "chris-portfolio-static-j",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4279", "--directory", "."],
+      "port": 4279
+    },
+    {
+      "name": "chris-portfolio-static-k",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4291", "--directory", "."],
+      "port": 4291
+    },
+    {
+      "name": "chris-portfolio-static-l",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4303", "--directory", "."],
+      "port": 4303
+    },
+    {
+      "name": "chris-portfolio-static-m",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4315", "--directory", "."],
+      "port": 4315
+    },
+    {
+      "name": "chris-portfolio-static-n",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4327", "--directory", "."],
+      "port": 4327
+    },
+    {
+      "name": "chris-portfolio-static-o",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4339", "--directory", "."],
+      "port": 4339
+    },
+    {
+      "name": "chris-portfolio-static-p",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4351", "--directory", "."],
+      "port": 4351
     }
   ]
 }

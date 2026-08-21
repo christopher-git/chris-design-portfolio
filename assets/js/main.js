@@ -99,8 +99,8 @@
       });
     };
 
-    /* Apply on load so archived cards stay hidden under the default "All work" chip. */
-    applyFilter("all");
+    /* Apply on load so the grid opens on the curated "Featured" set by default. */
+    applyFilter("Featured");
 
     filterRow.addEventListener("click", function (event) {
       var chip = event.target.closest(".filter-chip");
