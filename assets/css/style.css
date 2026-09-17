@@ -1466,6 +1466,11 @@ a.case-card:hover .case-cta svg {
     justify-content: space-between;
   }
 }
+.footer-credit {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: rgba(250, 249, 244, 0.35);
+}
 
 /* ---------- Contact page ---------- */
 .contact-section {
